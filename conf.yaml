@@ -1,0 +1,102 @@
+ega_audit:
+  file_path: "/Users/lxiang/projects/github/ega-file-transfer/ega_xml"
+  file_version: "v20170522"
+  file_pattern: "*-*/*.tsv"
+
+ega_operation:
+  file_path: "/Users/lxiang/projects/github/ega-file-transfer/ega_operation"
+  # file_path: "/Users/lxiang/projects/github/ega_script/ega_operation"
+  to_stage:
+    type: ['analysis', 'run']
+    analysis: 
+      file_name: "to_stage_analysis.tsv"
+      fields:
+          - project_code
+          - submitter_sample_id
+          - ega_sample_id
+          - ega_analysis_id
+          - file_name
+          - ega_file_id
+          - encrypted_file_md5sum
+          - file_md5sum
+          - dataset_id
+      key: ["ega_file_id", "EGA File Accession"]
+      require: ["ega_analysis_id", "EGA Analysis Accession"]
+
+    run: 
+        file_name: "to_stage_run.tsv"
+        fields:
+          - project_code
+          - submitter_sample_id
+          - ega_sample_id
+          - ega_experiment_id
+          - ega_run_id
+          - file_name
+          - ega_file_id
+          - encrypted_file_md5sum
+          - file_md5sum
+          - dataset_id
+        key: ["ega_file_id", "EGA File Accession"]
+        require: ["ega_run_id", "EGA Run Accession"]
+
+    mapping:
+        project_code: "ICGC DCC Project Code"
+        submitter_sample_id: "ICGC Submitted Sample ID"
+        ega_sample_id: "EGA Sample Accession"
+        ega_analysis_id: "EGA Analysis Accession"
+        ega_experiment_id: "EGA Experiment Accession"
+        ega_run_id: "EGA Run Accession"
+        file_name: "EGA Raw Sequence Filename"
+        ega_file_id: "EGA File Accession"
+        encrypted_file_md5sum: "MD5 Checksum"
+        file_md5sum: "Unencrypted Checksum"
+        dataset_id: "EGA Dataset Accession"        
+
+  to_remove: "to_remove.tsv"
+
+ega_job:
+  job_repo: "/Users/lxiang/projects/github/ega-file-transfer-to-collab-jtracker"
+  job_completed: "ega-file-transfer-to-collab.*.jtracker/job_state.completed/job.*/job.*.json"
+  job_running: "ega-file-transfer-to-collab.*.jtracker/job_state.running/job.*/job.*.json"
+  job_failed: "ega-file-transfer-to-collab.*.jtracker/job_state.failed/job.*/job.*.json"
+  job_queued: "ega-file-transfer-to-collab.*.jtracker/job_state.queued/job.*.json"
+  job_backlog: "ega-file-transfer-to-collab.*.jtracker/job_state.backlog/job.*.json"
+  job_folder: "/Users/lxiang/projects/github/ega-file-transfer-to-collab-jtracker/ega-file-transfer-to-collab.0.4.jtracker/job_state.backlog"
+  job:
+    job_fields: [
+      "bundle_id",
+      "bundle_type",
+      "ega_metadata_file_name",
+      "ega_metadata_object_id",
+      "ega_metadata_repo",
+      "ega_study_id",
+      "ega_dataset_id",
+      "ega_sample_id",
+      "ega_analysis_id",
+      "ega_experiment_id",
+      "ega_run_id",
+      "icgc_sample_id",
+      "library_strategy",
+      "project_code",
+      "submitter",
+      "submitter_sample_id"
+    ]
+    mapping:
+      project_code: "ICGC DCC Project Code"
+      ega_study_id: "EGA Study Accession"
+      ega_dataset_id: "EGA Dataset Accession"
+      submitter_sample_id: "ICGC Submitted Sample ID"
+      ega_sample_id: "EGA Sample Accession"
+      ega_analysis_id: "EGA Analysis Accession"
+      ega_experiment_id: "EGA Experiment Accession"
+      ega_run_id: "EGA Run Accession"
+      file_name: "EGA Raw Sequence Filename"
+      ega_file_id: "EGA File Accession"
+      encrypted_file_md5sum: "MD5 Checksum"
+      file_md5sum: "Unencrypted Checksum"
+      library_strategy: "ICGC Submitted Sequencing Strategy"
+
+
+
+
+
