@@ -185,9 +185,6 @@ def generate_ega_job(conf_dict, annotations, project, seq_strategy):
                     bundle_id = l.get('EGA Run Accession')
                 else:
                     continue
-                
-                # only generate analysis for PRAD-CA
-                # if project_code == 'PRAD-CA' and not bundle_id.startswith('EGAZ'): continue
 
                 if not ega_job.get(bundle_id): 
                     ega_job[bundle_id] = {}
@@ -199,7 +196,7 @@ def generate_ega_job(conf_dict, annotations, project, seq_strategy):
                         'bundle_type': 'analysis' if bundle_id.startswith('EGAZ') else 'run',
                         'ega_metadata_repo': 'https://raw.githubusercontent.com/icgc-dcc/ega-file-transfer/master/ega_xml/'+file_version,
                         'ega_metadata_file_name': 'bundle.'+bundle_id+'.xml',
-                        'ega_metadata_object_id': generate_object_id('bundle.'+bundle_id+'.xml', bundle_id, project_code), 
+                        # 'ega_metadata_object_id': generate_object_id('bundle.'+bundle_id+'.xml', bundle_id, project_code), 
                         'submitter': project_code
                     })
                         
@@ -213,22 +210,24 @@ def generate_ega_job(conf_dict, annotations, project, seq_strategy):
                     'file_md5sum': l.get('Unencrypted Checksum'),
                     'idx_file_name': '.'.join([l.get('Unencrypted Checksum'), raw_file_name, 'bai']) if l.get('EGA Analysis Accession') else None
                 })
-                # # temperary fix for LIHM-FR 
-                # ega_file.update({
-                #     'ega_file_id': l.get('EGA File Accession'),
-                #     'file_name': '.'.join([l.get('MD5 Checksum'), raw_file_name]),
-                #     'file_md5sum': l.get('MD5 Checksum'),
-                #     'idx_file_name': '.'.join([l.get('MD5 Checksum'), raw_file_name, 'bai']) if l.get('EGA Analysis Accession') else None
-                # })
-                ega_file['object_id'] = generate_object_id(ega_file['file_name'], bundle_id, project_code)
-                ega_file['idx_object_id'] = generate_object_id(ega_file['idx_file_name'], bundle_id, project_code) if ega_file.get('idx_file_name') else None 
+
+                # ega_file['object_id'] = generate_object_id(ega_file['file_name'], bundle_id, project_code)
+                # ega_file['idx_object_id'] = generate_object_id(ega_file['idx_file_name'], bundle_id, project_code) if ega_file.get('idx_file_name') else None 
                 ega_job[bundle_id]['files'].append(ega_file)
                 ega_file_ids.add(l.get('EGA File Accession'))
 
 
         for bundle_id, job in ega_job.iteritems():
-            job_name = '.'.join(['job', bundle_id, job.get('project_code'), job.get('submitter_sample_id'), job.get('ega_sample_id'), 'json'])
+            #update job by generating the object_id
+            job.update({'ega_metadata_object_id': generate_object_id('bundle.'+bundle_id+'.xml', bundle_id, job.get('project_code'))})
+            for job_file in job.get('files'):
+                job_file.update({
+                    'object_id': generate_object_id(job_file['file_name'], bundle_id, job.get('project_code'))
+                    'idx_object_id': generate_object_id(job_file['idx_file_name'], bundle_id, job.get('project_code')) if job_file.get('idx_file_name') else None
+                    })
 
+            # write the job json
+            job_name = '.'.join(['job', bundle_id, job.get('project_code'), job.get('submitter_sample_id'), job.get('ega_sample_id'), 'json'])
             with open(os.path.join(job_path, job_name), 'w') as f:
                 f.write(json.dumps(job, indent=4, sort_keys=True))
 
