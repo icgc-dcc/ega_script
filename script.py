@@ -128,7 +128,7 @@ def main(argv=None):
                 annotations['completed'].add(fid)
 
     # get the file list for transferring job already queued
-    for s in ['completed', 'running', 'failed', 'queued']:
+    for s in ['completed', 'running', 'failed', 'queued', 'backlog']:
         job_pattern = os.path.join(conf_dict.get('ega_job').get('job_repo'), conf_dict.get('ega_job').get('job_'+s))
         files = glob.glob(job_pattern)
         for fname in files:
@@ -196,7 +196,6 @@ def generate_ega_job(conf_dict, annotations, project, seq_strategy):
                         'bundle_type': 'analysis' if bundle_id.startswith('EGAZ') else 'run',
                         'ega_metadata_repo': 'https://raw.githubusercontent.com/icgc-dcc/ega-file-transfer/master/ega_xml/'+file_version,
                         'ega_metadata_file_name': 'bundle.'+bundle_id+'.xml',
-                        # 'ega_metadata_object_id': generate_object_id('bundle.'+bundle_id+'.xml', bundle_id, project_code), 
                         'submitter': project_code
                     })
                         
@@ -211,8 +210,6 @@ def generate_ega_job(conf_dict, annotations, project, seq_strategy):
                     'idx_file_name': '.'.join([l.get('Unencrypted Checksum'), raw_file_name, 'bai']) if l.get('EGA Analysis Accession') else None
                 })
 
-                # ega_file['object_id'] = generate_object_id(ega_file['file_name'], bundle_id, project_code)
-                # ega_file['idx_object_id'] = generate_object_id(ega_file['idx_file_name'], bundle_id, project_code) if ega_file.get('idx_file_name') else None 
                 ega_job[bundle_id]['files'].append(ega_file)
                 ega_file_ids.add(l.get('EGA File Accession'))
 
@@ -222,7 +219,7 @@ def generate_ega_job(conf_dict, annotations, project, seq_strategy):
             job.update({'ega_metadata_object_id': generate_object_id('bundle.'+bundle_id+'.xml', bundle_id, job.get('project_code'))})
             for job_file in job.get('files'):
                 job_file.update({
-                    'object_id': generate_object_id(job_file['file_name'], bundle_id, job.get('project_code'))
+                    'object_id': generate_object_id(job_file['file_name'], bundle_id, job.get('project_code')),
                     'idx_object_id': generate_object_id(job_file['idx_file_name'], bundle_id, job.get('project_code')) if job_file.get('idx_file_name') else None
                     })
 
