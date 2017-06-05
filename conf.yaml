@@ -1,10 +1,10 @@
 ega_audit:
-  file_path: "/Users/lxiang/projects/github/ega-file-transfer/ega_xml"
+  file_path: "../ega-file-transfer/ega_xml"
   file_version: "v20170522"
   file_pattern: "*-*/*.tsv"
 
 ega_operation:
-  file_path: "/Users/lxiang/projects/github/ega-file-transfer/ega_operation"
+  file_path: "../ega-file-transfer/ega_operation"
   # file_path: "/Users/lxiang/projects/github/ega_script/ega_operation"
   to_stage:
     type: ['analysis', 'run']
@@ -55,13 +55,13 @@ ega_operation:
   to_remove: "to_remove.tsv"
 
 ega_job:
-  job_repo: "/Users/lxiang/projects/github/ega-file-transfer-to-collab-jtracker"
+  job_repo: "../ega-file-transfer-to-collab-jtracker"
   job_completed: "ega-file-transfer-to-collab.*.jtracker/job_state.completed/job.*/job.*.json"
   job_running: "ega-file-transfer-to-collab.*.jtracker/job_state.running/job.*/job.*.json"
   job_failed: "ega-file-transfer-to-collab.*.jtracker/job_state.failed/job.*/job.*.json"
   job_queued: "ega-file-transfer-to-collab.*.jtracker/job_state.queued/job.*.json"
   job_backlog: "ega-file-transfer-to-collab.*.jtracker/job_state.backlog/job.*.json"
-  job_folder: "/Users/lxiang/projects/github/ega-file-transfer-to-collab-jtracker/ega-file-transfer-to-collab.0.4.jtracker/job_state.backlog"
+  job_folder: "../ega-file-transfer-to-collab-jtracker/ega-file-transfer-to-collab.0.4.jtracker/job_state.backlog"
   job:
     job_fields: [
       "bundle_id",
