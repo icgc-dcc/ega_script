@@ -73,7 +73,7 @@ def main(argv=None):
     try:
         subprocess.check_output(['ascp', '-QTl','100m','--file-list=flist.txt', '--ignore-host-key','--mode=recv','--host='+os.environ['ASCP_EGA_HOST'],'--user='+os.environ['ASCP_EGA_USER'],'.'])
     except Exception, err:
-        logger(str(err))
+        logger.error(str(err))
         sys.exit(1)
     # add staged ega_file_id
     with open('dbox_content', 'r') as f:
@@ -91,7 +91,7 @@ def main(argv=None):
         subprocess.check_output("git pull", shell=True)
         os.chdir(origWD)
     except Exception, err:
-        logger(str(err))
+        logger.error(str(err))
         sys.exit(1)    
 
 
@@ -113,7 +113,7 @@ def main(argv=None):
         subprocess.check_output("git pull", shell=True)
         os.chdir(origWD)
     except Exception, err:
-        logger(str(err))
+        logger.error(str(err))
         sys.exit(1)
 
     # get the file list for transferring completed
