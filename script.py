@@ -79,7 +79,7 @@ def main(argv=None):
     with open('dbox_content', 'r') as f:
         for l in f:
             if l.endswith('md5'): continue
-            fid = l.split('/')[2].split('.')[0]
+            fid = l.split('/')[-1].split('.')[0]
             if not annotations.get('staged'): annotations['staged'] = set()
             annotations['staged'].add(fid)
 
