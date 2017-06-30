@@ -3,6 +3,9 @@ import csv
 import json
 import glob
 import utils
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 def generate(conf_dict, annotations, project, seq_strategy):

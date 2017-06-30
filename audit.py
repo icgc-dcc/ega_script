@@ -5,6 +5,9 @@ from collections import OrderedDict
 import subprocess
 import shutil
 import utils
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 def generate_files_to_stage(conf_dict, annotations, seq_strategy):
@@ -74,6 +77,8 @@ def generate_files_to_stage(conf_dict, annotations, seq_strategy):
                     line = utils.get_line(l)
                     o.write('\t'.join(line) + '\n')
 
+
+def generate_files_to_remove(conf_dict, annotations):
     to_remove_file_name = os.path.join(conf_dict.get('ega_operation').get('file_path'), conf_dict.get('ega_operation').get('to_remove'))
     # generate the files to be removed
     with open(to_remove_file_name, 'w') as f:

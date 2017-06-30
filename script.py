@@ -14,6 +14,7 @@ import job
 import audit
 import logging
 import logging.config
+import utils
 
 
 def main(argv=None):
@@ -42,22 +43,6 @@ def main(argv=None):
     with open(conf, 'r') as c:
         conf_dict = yaml.load(c)
 
-    # # add logger
-    # ch = logging.StreamHandler()
-    # logger.setLevel(logging.INFO)
-    # ch.setLevel(logging.ERROR)
-
-    # log_file = re.sub(r'\.py$', '.log', os.path.basename(__file__))
-    # # delete old log first if exists
-    # if os.path.isfile(log_file): os.remove(log_file)
-
-    # fh = logging.FileHandler(log_file)
-    # fh.setLevel(logging.DEBUG)
-    # formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    # fh.setFormatter(formatter)
-    # ch.setFormatter(formatter)
-    # logger.addHandler(fh)
-    # logger.addHandler(ch)
     logger = logging.getLogger(__name__)
     utils.setup_logging()
 
@@ -139,7 +124,8 @@ def main(argv=None):
                     annotations['generated'].add(fid)
 
     if task == 'stage':
-        audit.generate_files_to_stage(conf_dict, annotations, seq_strategy)
+        # audit.generate_files_to_stage(conf_dict, annotations, seq_strategy)
+        audit.generate_files_to_remove(conf_dict, annotations)
     elif task == 'job':
         job.generate(conf_dict, annotations, project, seq_strategy)
     else:
