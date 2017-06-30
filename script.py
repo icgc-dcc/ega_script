@@ -106,38 +106,40 @@ def main(argv=None):
                  annotations['to_stage'].add(l.get('ega_file_id'))   
 
     # git pull the job repo
-    try:
-        origWD = os.getcwd()
-        os.chdir(conf_dict.get('ega_job').get('job_repo'))
-        subprocess.check_output("git checkout master", shell=True)
-        subprocess.check_output("git pull", shell=True)
-        os.chdir(origWD)
-    except Exception, err:
-        logger.error(str(err))
-        sys.exit(1)
+    repo_list = glob.glob(conf_dict.get('ega_job').get('job_repo'))
+    for repo in repo_list:
+        try:
+            origWD = os.getcwd()
+            os.chdir(repo)
+            subprocess.check_output("git checkout master", shell=True)
+            subprocess.check_output("git pull", shell=True)
+            os.chdir(origWD)
+        except Exception, err:
+            logger.error(str(err))
+            sys.exit(1)
 
-    # get the file list for transferring completed
-    job_pattern = os.path.join(conf_dict.get('ega_job').get('job_repo'), conf_dict.get('ega_job').get('job_completed'))
-    files = glob.glob(job_pattern)
-    for fname in files:
-        with open(fname, 'r') as f:
-            job_dict = json.loads(f.read())
-            for ega_file in job_dict.get('files'):
-                fid = ega_file.get('ega_file_id')
-                if not annotations.get('completed'): annotations['completed'] = set()
-                annotations['completed'].add(fid)
-
-    # get the file list for transferring job already queued
-    for s in ['completed', 'running', 'failed', 'queued', 'backlog']:
-        job_pattern = os.path.join(conf_dict.get('ega_job').get('job_repo'), conf_dict.get('ega_job').get('job_'+s))
+        # get the file list for transferring completed
+        job_pattern = os.path.join(repo, conf_dict.get('ega_job').get('job_completed'))
         files = glob.glob(job_pattern)
         for fname in files:
             with open(fname, 'r') as f:
                 job_dict = json.loads(f.read())
                 for ega_file in job_dict.get('files'):
                     fid = ega_file.get('ega_file_id')
-                    if not annotations.get('generated'): annotations['generated'] = set()
-                    annotations['generated'].add(fid)
+                    if not annotations.get('completed'): annotations['completed'] = set()
+                    annotations['completed'].add(fid)
+
+        # get the file list for transferring job already queued
+        for s in ['completed', 'running', 'failed', 'queued', 'backlog']:
+            job_pattern = os.path.join(repo, conf_dict.get('ega_job').get('job_'+s))
+            files = glob.glob(job_pattern)
+            for fname in files:
+                with open(fname, 'r') as f:
+                    job_dict = json.loads(f.read())
+                    for ega_file in job_dict.get('files'):
+                        fid = ega_file.get('ega_file_id')
+                        if not annotations.get('generated'): annotations['generated'] = set()
+                        annotations['generated'].add(fid)
 
     if task == 'stage':
         generate_files_to_stage(conf_dict, annotations, seq_strategy)
