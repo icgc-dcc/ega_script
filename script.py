@@ -130,7 +130,7 @@ def main(argv=None):
                     annotations['completed'].add(fid)
 
         # get the file list for transferring job already queued
-        for s in ['completed', 'running', 'failed', 'queued', 'backlog']:
+        for s in ['completed', 'running', 'failed', 'queued']:
             job_pattern = os.path.join(repo, conf_dict.get('ega_job').get('job_'+s))
             files = glob.glob(job_pattern)
             for fname in files:
@@ -169,8 +169,10 @@ def generate_ega_job(conf_dict, annotations, project, seq_strategy):
         with open(fname) as f:
             reader = csv.DictReader(f, delimiter='\t')
             for l in reader:
-                # skip the files not staged
-                if not l.get('EGA File Accession') in annotations.get('staged').union(annotations.get('to_stage')): continue
+                # # skip the files not staged or not to be staged
+                # if not l.get('EGA File Accession') in annotations.get('staged').union(annotations.get('to_stage')): continue
+                # skip the files not staged only for safty
+                if not l.get('EGA File Accession') in annotations.get('staged'): continue
                 # skip the files generated
                 if l.get('EGA File Accession') in annotations.get('generated'): continue
                 # skip the files which does not belong to given library strategy
