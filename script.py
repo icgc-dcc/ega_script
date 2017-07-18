@@ -142,9 +142,11 @@ def main(argv=None):
                         annotations['generated'].add(fid)
 
     if task == 'stage':
-        generate_files_to_stage(conf_dict, annotations, seq_strategy)
+        generate_files_to_stage(conf_dict, annotations, project, seq_strategy)
     elif task == 'job':
         generate_ega_job(conf_dict, annotations, project, seq_strategy)
+    elif task == 'remove':
+        generate_files_to_remove(conf_dict, annotations)
     else:
         pass
 
@@ -233,7 +235,7 @@ def generate_ega_job(conf_dict, annotations, project, seq_strategy):
                 f.write(json.dumps(job, indent=4, sort_keys=True))
 
 
-def generate_files_to_stage(conf_dict, annotations, seq_strategy):
+def generate_files_to_stage(conf_dict, annotations, project, seq_strategy):
     # audit path
     file_path = conf_dict.get('ega_audit').get('file_path')
     file_version = conf_dict.get('ega_audit').get('file_version')
@@ -243,16 +245,17 @@ def generate_files_to_stage(conf_dict, annotations, seq_strategy):
     to_stage_type = conf_dict.get('ega_operation').get('to_stage').get('type')
     mapping = conf_dict.get('ega_operation').get('to_stage').get('mapping')
 
+    if os.path.exists(output_path): shutil.rmtree(output_path)
+    os.makedirs(output_path)
+
     # generate the files need to be staged
     files = glob.glob(os.path.join(file_path, file_version, file_pattern))
     for fname in files:
         project_code = fname.split('/')[-2]
-        output_file_path = os.path.join(output_path, project_code)
-        if os.path.exists(output_file_path): shutil.rmtree(output_file_path)
-        os.makedirs(output_file_path)
+        # skip the project if not in the list of project
+        if project and not project_code in project: continue
 
-        for t in to_stage_type:
-            output_file_name = conf_dict.get('ega_operation').get('to_stage').get(t).get('file_name')
+        for t in to_stage_type:          
             output_fields = conf_dict.get('ega_operation').get('to_stage').get(t).get('fields')
             key = conf_dict.get('ega_operation').get('to_stage').get(t).get('key')
             require = conf_dict.get('ega_operation').get('to_stage').get(t).get('require')
@@ -294,12 +297,18 @@ def generate_files_to_stage(conf_dict, annotations, seq_strategy):
 
             # write to the file
             if not ega_file_list: continue
+
+            output_file_path = os.path.join(output_path, project_code)
+            if not os.path.exists(output_file_path): os.makedirs(output_file_path)
+            output_file_name = conf_dict.get('ega_operation').get('to_stage').get(t).get('file_name')
             with open(os.path.join(output_file_path, output_file_name), 'w') as o:
                 o.write('\t'.join(output_fields) + '\n')
                 for l in ega_file_list:
                     line = get_line(l)
                     o.write('\t'.join(line) + '\n')
 
+
+def generate_files_to_remove(conf_dict, annotations):
     to_remove_file_name = os.path.join(conf_dict.get('ega_operation').get('file_path'), conf_dict.get('ega_operation').get('to_remove'))
     # generate the files to be removed
     with open(to_remove_file_name, 'w') as f:
