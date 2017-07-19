@@ -45,7 +45,7 @@ def generate(conf_dict, annotations, project, seq_strategy):
  
                 # skip the record if it has the same fid as the previous ones
                 if l.get('EGA File Accession') in ega_file_ids: 
-                    logger.warning('File %s has more than one records in the audit report.', l.get('EGA File Accession'))
+                    logger.warning('File %s::%s has more than one records in the audit report version %s.', project_code, l.get('EGA File Accession'), file_version)
                     continue
 
                 # skip the files generated
