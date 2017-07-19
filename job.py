@@ -67,8 +67,7 @@ def generate(conf_dict, annotations, project, seq_strategy):
                         'bundle_id': bundle_id,
                         'bundle_type': 'analysis' if bundle_id.startswith('EGAZ') else 'run',
                         'ega_metadata_repo': 'https://raw.githubusercontent.com/icgc-dcc/ega-file-transfer/master/ega_xml/'+file_version,
-                        'ega_metadata_file_name': 'bundle.'+bundle_id+'.xml',
-                        'submitter': project_code
+                        'ega_metadata_file_name': 'bundle.'+bundle_id+'.xml'
                     })
                         
                     ega_job[bundle_id]['files'] = []

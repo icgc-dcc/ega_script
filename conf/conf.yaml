@@ -78,14 +78,21 @@ ega_job:
       "icgc_sample_id",
       "library_strategy",
       "project_code",
-      "submitter",
-      "submitter_sample_id"
+      "submitter_donor_id",
+      "submitter_specimen_id",
+      "submitter_specimen_type",
+      "submitter_sample_id",
+      "submitter"
     ]
     mapping:
       project_code: "ICGC DCC Project Code"
+      submitter_donor_id: "ICGC Submitted Donor ID"
+      submitter_specimen_id: "ICGC Submitted Specimen ID"
+      submitter_sample_id: "ICGC Submitted Sample ID"
+      submitter_specimen_type: "ICGC Submitted Specimen Type"
+      submitter: "ICGC DCC Project Code"
       ega_study_id: "EGA Study Accession"
       ega_dataset_id: "EGA Dataset Accession"
-      submitter_sample_id: "ICGC Submitted Sample ID"
       ega_sample_id: "EGA Sample Accession"
       ega_analysis_id: "EGA Analysis Accession"
       ega_experiment_id: "EGA Experiment Accession"
