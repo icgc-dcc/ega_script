@@ -16,6 +16,7 @@ handlers:
         level: INFO
         formatter: simple
         filename: log/info.log
+        filemode: w
         maxBytes: 10485760 # 10MB
         backupCount: 20
         encoding: utf8
@@ -25,6 +26,7 @@ handlers:
         level: WARN
         formatter: simple
         filename: log/warn.log
+        filemode: w
         maxBytes: 10485760 # 10MB
         backupCount: 20
         encoding: utf8
@@ -34,6 +36,7 @@ handlers:
         level: ERROR
         formatter: simple
         filename: log/error.log
+        filemode: w
         maxBytes: 10485760 # 10MB
         backupCount: 20
         encoding: utf8

@@ -33,14 +33,14 @@ def generate(conf_dict, annotations, project, seq_strategy):
 
                 # skip the files which do not have EGA File Accession
                 if not l.get('EGA File Accession'):
-                    logger.warning('Donor %s::%s with specimen: %s has file: %s which is missing EGA File Accession.', l.get('ICGC DCC Project Code'), l.get('ICGC Submitted Donor ID'), l.get('ICGC Submitted Specimen ID'), l.get('EGA Raw Sequence Filename'))
+                    logger.warning('Donor %s::%s with sample: %s is missing EGA File Accession.', l.get('ICGC DCC Project Code'), l.get('ICGC Submitted Donor ID'), l.get('ICGC Submitted Sample ID'))
                     continue
 
                 # # skip the files not staged or not to be staged
                 # if not l.get('EGA File Accession') in annotations.get('staged').union(annotations.get('to_stage')): continue
                 # skip the files not staged only for safty
                 if not l.get('EGA File Accession') in annotations.get('staged'): 
-                    logger.warning('%s has not been staged.', l.get('EGA File Accession'))
+                    logger.warning('%s::%s has not been staged.', project_code, l.get('EGA File Accession'))
                     continue
  
                 # skip the record if it has the same fid as the previous ones

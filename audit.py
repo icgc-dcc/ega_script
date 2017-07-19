@@ -44,7 +44,7 @@ def generate_files_to_stage(conf_dict, annotations, project, seq_strategy):
 
                     if not l.get(require[1]): continue
                     if not l.get(key[1]):
-                        logger_stage.warning('Donor %s::%s with specimen: %s miss %s.', l.get('ICGC DCC Project Code'), l.get('ICGC Submitted Donor ID'), l.get('ICGC Submitted Specimen ID'), key[1]) 
+                        logger_stage.warning('Donor %s::%s with sample: %s miss %s.', l.get('ICGC DCC Project Code'), l.get('ICGC Submitted Donor ID'), l.get('ICGC Submitted Sample ID'), key[1]) 
                         continue
 
                     if not ega_file.get(l.get(key[1])): ega_file[l.get(key[1])] = OrderedDict()
