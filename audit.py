@@ -42,9 +42,7 @@ def generate_files_to_stage(conf_dict, annotations, project, seq_strategy):
                 for l in reader:
                     if seq_strategy and not l.get('ICGC Submitted Sequencing Strategy') in seq_strategy: continue
 
-                    if not l.get(require[1]):
-                        logger_stage.warning('Donor %s::%s with specimen: %s miss %s.', l.get('ICGC DCC Project Code'), l.get('ICGC Submitted Donor ID'), l.get('ICGC Submitted Specimen ID'), require[1])
-                        continue
+                    if not l.get(require[1]): continue
                     if not l.get(key[1]):
                         logger_stage.warning('Donor %s::%s with specimen: %s miss %s.', l.get('ICGC DCC Project Code'), l.get('ICGC Submitted Donor ID'), l.get('ICGC Submitted Specimen ID'), key[1]) 
                         continue
@@ -86,7 +84,7 @@ def generate_files_to_stage(conf_dict, annotations, project, seq_strategy):
             with open(os.path.join(output_file_path, output_file_name), 'w') as o:
                 o.write('\t'.join(output_fields) + '\n')
                 for l in ega_file_list:
-                    line = get_line(l)
+                    line = utils.get_line(l)
                     o.write('\t'.join(line) + '\n')
 
 
