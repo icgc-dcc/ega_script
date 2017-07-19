@@ -3,12 +3,13 @@ import logging
 import os
 import yaml
 import logging
+import logging.config
 
 logger = logging.getLogger(__name__)
 
 
 def setup_logging(
-    default_path='logging.yaml',
+    default_path='conf/logging.yaml',
     default_level=logging.INFO,
     env_key='LOG_CFG'
 ):

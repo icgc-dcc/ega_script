@@ -7,10 +7,11 @@ import shutil
 import utils
 import logging
 
-logger = logging.getLogger(__name__)
+logger_stage = logging.getLogger(__name__+'.stage')
+logger_remove = logging.getLogger(__name__+'.remove')
 
 
-def generate_files_to_stage(conf_dict, annotations, seq_strategy):
+def generate_files_to_stage(conf_dict, annotations, project, seq_strategy):
     # audit path
     file_path = conf_dict.get('ega_audit').get('file_path')
     file_version = conf_dict.get('ega_audit').get('file_version')
@@ -20,16 +21,17 @@ def generate_files_to_stage(conf_dict, annotations, seq_strategy):
     to_stage_type = conf_dict.get('ega_operation').get('to_stage').get('type')
     mapping = conf_dict.get('ega_operation').get('to_stage').get('mapping')
 
+    if os.path.exists(output_path): shutil.rmtree(output_path)
+    os.makedirs(output_path)
+
     # generate the files need to be staged
     files = glob.glob(os.path.join(file_path, file_version, file_pattern))
     for fname in files:
         project_code = fname.split('/')[-2]
-        output_file_path = os.path.join(output_path, project_code)
-        if os.path.exists(output_file_path): shutil.rmtree(output_file_path)
-        os.makedirs(output_file_path)
+        # skip the project if not in the list of project
+        if project and not project_code in project: continue
 
-        for t in to_stage_type:
-            output_file_name = conf_dict.get('ega_operation').get('to_stage').get(t).get('file_name')
+        for t in to_stage_type:          
             output_fields = conf_dict.get('ega_operation').get('to_stage').get(t).get('fields')
             key = conf_dict.get('ega_operation').get('to_stage').get(t).get('key')
             require = conf_dict.get('ega_operation').get('to_stage').get(t).get('require')
@@ -38,9 +40,15 @@ def generate_files_to_stage(conf_dict, annotations, seq_strategy):
             with open(fname) as f:
                 reader = csv.DictReader(f, delimiter='\t')
                 for l in reader:
-                    if not l.get(require[1]): continue
-                    if not l.get(key[1]): continue
                     if seq_strategy and not l.get('ICGC Submitted Sequencing Strategy') in seq_strategy: continue
+
+                    if not l.get(require[1]):
+                        logger_stage.warning('Donor %s::%s with specimen: %s miss %s.', l.get('ICGC DCC Project Code'), l.get('ICGC Submitted Donor ID'), l.get('ICGC Submitted Specimen ID'), require[1])
+                        continue
+                    if not l.get(key[1]):
+                        logger_stage.warning('Donor %s::%s with specimen: %s miss %s.', l.get('ICGC DCC Project Code'), l.get('ICGC Submitted Donor ID'), l.get('ICGC Submitted Specimen ID'), key[1]) 
+                        continue
+
                     if not ega_file.get(l.get(key[1])): ega_file[l.get(key[1])] = OrderedDict()
                     for field in output_fields:
                         if not ega_file[l.get(key[1])].get(field): ega_file[l.get(key[1])][field] = set()
@@ -56,13 +64,13 @@ def generate_files_to_stage(conf_dict, annotations, seq_strategy):
                     # QC the data
                     # skip the file if encrypted md5 = unencrypted md5
                     if fvalue['file_md5sum'] == fvalue['encrypted_file_md5sum']: 
-                        logger.warning('%s:%s has the same file_md5sum and encrypted_file_md5sum: %s', project_code, fid, fvalue['file_md5sum'])
+                        logger_stage.warning('%s:%s has the same file_md5sum and encrypted_file_md5sum: %s', project_code, fid, fvalue['file_md5sum'])
                         continue
                     skip=False
                     for h in output_fields:
                         # skip the file if there is any id inconsistent
                         if not h in ['dataset_id'] and len(fvalue[h]) > 1:
-                            logger.warning('%s has the id inconsistent: %s', fid, h) 
+                            logger_stage.warning('%s has the id inconsistent: %s', fid, h) 
                             skip=True
                     if skip: continue
 
@@ -71,10 +79,14 @@ def generate_files_to_stage(conf_dict, annotations, seq_strategy):
 
             # write to the file
             if not ega_file_list: continue
+
+            output_file_path = os.path.join(output_path, project_code)
+            if not os.path.exists(output_file_path): os.makedirs(output_file_path)
+            output_file_name = conf_dict.get('ega_operation').get('to_stage').get(t).get('file_name')
             with open(os.path.join(output_file_path, output_file_name), 'w') as o:
                 o.write('\t'.join(output_fields) + '\n')
                 for l in ega_file_list:
-                    line = utils.get_line(l)
+                    line = get_line(l)
                     o.write('\t'.join(line) + '\n')
 
 
@@ -86,5 +98,7 @@ def generate_files_to_remove(conf_dict, annotations):
             try:
                 ret = subprocess.check_output(['grep', fid, 'dbox_content'])
                 f.write(ret)
+                logger_remove.info('fid: %s is to be removed from the server', fid)
             except subprocess.CalledProcessError:
+                logger_remove.warning('fid: %s is not on the server', fid)
                 continue      

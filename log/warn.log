@@ -1,0 +1,331 @@
+2017-07-19 10:31:25,912 - __main__ - ERROR - Command '['ascp', '-QTl', '100m', '--ignore-host-key', '--mode=recv', '--host=xfer.crg.eu', '--user=dboxICGC', 'dbox_content', '.']' returned non-zero exit status 1
+2017-07-19 10:36:51,459 - __main__ - ERROR - Command '['ascp', '-QTl', '100m', '--ignore-host-key', '--mode=recv', '--host=xfer.crg.eu', '--user=dboxICGC', 'dbox_content', '.']' returned non-zero exit status 1
+2017-07-19 10:39:14,837 - __main__ - ERROR - Command '['ascp', '-QTl', '100m', '--ignore-host-key', '--mode=recv', '--host=xfer.crg.eu', '--user=dboxICGC', 'dbox_content', '.']' returned non-zero exit status 1
+2017-07-19 10:42:33,975 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1163904 with specimen: CGP_specimen_1192107 miss EGA Analysis Accession.
+2017-07-19 10:42:33,975 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1163904 with specimen: CGP_specimen_1192107 miss EGA Analysis Accession.
+2017-07-19 10:42:33,975 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1163904 with specimen: CGP_specimen_1192107 miss EGA Analysis Accession.
+2017-07-19 10:42:33,975 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1163904 with specimen: CGP_specimen_1192108 miss EGA Analysis Accession.
+2017-07-19 10:42:33,975 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1163904 with specimen: CGP_specimen_1192108 miss EGA Analysis Accession.
+2017-07-19 10:42:33,975 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1163904 with specimen: CGP_specimen_1192108 miss EGA Analysis Accession.
+2017-07-19 10:42:33,975 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215615 with specimen: CGP_specimen_1244883 miss EGA Analysis Accession.
+2017-07-19 10:42:33,975 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215615 with specimen: CGP_specimen_1244884 miss EGA Analysis Accession.
+2017-07-19 10:42:33,975 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215616 with specimen: CGP_specimen_1244885 miss EGA Analysis Accession.
+2017-07-19 10:42:33,976 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215616 with specimen: CGP_specimen_1244886 miss EGA Analysis Accession.
+2017-07-19 10:42:33,976 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215617 with specimen: CGP_specimen_1244887 miss EGA Analysis Accession.
+2017-07-19 10:42:33,976 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215617 with specimen: CGP_specimen_1244888 miss EGA Analysis Accession.
+2017-07-19 10:42:33,976 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215620 with specimen: CGP_specimen_1244893 miss EGA Analysis Accession.
+2017-07-19 10:42:33,976 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215620 with specimen: CGP_specimen_1244894 miss EGA Analysis Accession.
+2017-07-19 10:42:33,976 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215622 with specimen: CGP_specimen_1244897 miss EGA Analysis Accession.
+2017-07-19 10:42:33,976 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215622 with specimen: CGP_specimen_1244898 miss EGA Analysis Accession.
+2017-07-19 10:42:33,976 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215623 with specimen: CGP_specimen_1244899 miss EGA Analysis Accession.
+2017-07-19 10:42:33,976 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215623 with specimen: CGP_specimen_1244900 miss EGA Analysis Accession.
+2017-07-19 10:42:33,976 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1234205 with specimen: CGP_specimen_1266756 miss EGA Analysis Accession.
+2017-07-19 10:42:33,976 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1309158 with specimen: CGP_specimen_1342108 miss EGA Analysis Accession.
+2017-07-19 10:42:33,977 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1309158 with specimen: CGP_specimen_1342109 miss EGA Analysis Accession.
+2017-07-19 10:42:33,977 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1309177 with specimen: CGP_specimen_1342137 miss EGA Analysis Accession.
+2017-07-19 10:42:33,977 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1309187 with specimen: CGP_specimen_1342148 miss EGA Analysis Accession.
+2017-07-19 10:42:33,977 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1309187 with specimen: CGP_specimen_1342147 miss EGA Analysis Accession.
+2017-07-19 10:42:33,977 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1338849 with specimen: CGP_specimen_1389186 miss EGA Analysis Accession.
+2017-07-19 10:42:33,977 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1338849 with specimen: CGP_specimen_1389186 miss EGA Analysis Accession.
+2017-07-19 10:42:33,977 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1338870 with specimen: CGP_specimen_1389207 miss EGA Analysis Accession.
+2017-07-19 10:42:33,977 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1338870 with specimen: CGP_specimen_1389207 miss EGA Analysis Accession.
+2017-07-19 10:42:33,977 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1338904 with specimen: CGP_specimen_1389241 miss EGA Analysis Accession.
+2017-07-19 10:42:33,977 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1338904 with specimen: CGP_specimen_1389241 miss EGA Analysis Accession.
+2017-07-19 10:42:33,977 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1338905 with specimen: CGP_specimen_1389242 miss EGA Analysis Accession.
+2017-07-19 10:42:33,978 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1338905 with specimen: CGP_specimen_1389242 miss EGA Analysis Accession.
+2017-07-19 10:42:33,978 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1338911 with specimen: CGP_specimen_1389248 miss EGA Analysis Accession.
+2017-07-19 10:42:33,978 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1338911 with specimen: CGP_specimen_1389248 miss EGA Analysis Accession.
+2017-07-19 10:42:33,978 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1338912 with specimen: CGP_specimen_1389249 miss EGA Analysis Accession.
+2017-07-19 10:42:33,978 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1338912 with specimen: CGP_specimen_1389249 miss EGA Analysis Accession.
+2017-07-19 10:42:33,978 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353439 with specimen: CGP_specimen_1403867 miss EGA Analysis Accession.
+2017-07-19 10:42:33,978 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353439 with specimen: CGP_specimen_1403867 miss EGA Analysis Accession.
+2017-07-19 10:42:33,979 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353444 with specimen: CGP_specimen_1403872 miss EGA Analysis Accession.
+2017-07-19 10:42:33,979 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353444 with specimen: CGP_specimen_1403872 miss EGA Analysis Accession.
+2017-07-19 10:42:33,979 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353446 with specimen: CGP_specimen_1403874 miss EGA Analysis Accession.
+2017-07-19 10:42:33,979 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353446 with specimen: CGP_specimen_1403874 miss EGA Analysis Accession.
+2017-07-19 10:42:33,979 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353450 with specimen: CGP_specimen_1403878 miss EGA Analysis Accession.
+2017-07-19 10:42:33,979 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353450 with specimen: CGP_specimen_1403878 miss EGA Analysis Accession.
+2017-07-19 10:42:33,979 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353455 with specimen: CGP_specimen_1403883 miss EGA Analysis Accession.
+2017-07-19 10:42:33,979 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353455 with specimen: CGP_specimen_1403883 miss EGA Analysis Accession.
+2017-07-19 10:42:33,979 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353459 with specimen: CGP_specimen_1403887 miss EGA Analysis Accession.
+2017-07-19 10:42:33,979 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353459 with specimen: CGP_specimen_1403887 miss EGA Analysis Accession.
+2017-07-19 10:42:33,980 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353464 with specimen: CGP_specimen_1403892 miss EGA Analysis Accession.
+2017-07-19 10:42:33,980 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353464 with specimen: CGP_specimen_1403892 miss EGA Analysis Accession.
+2017-07-19 10:42:33,980 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353468 with specimen: CGP_specimen_1403896 miss EGA Analysis Accession.
+2017-07-19 10:42:33,980 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353468 with specimen: CGP_specimen_1403896 miss EGA Analysis Accession.
+2017-07-19 10:42:33,980 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353470 with specimen: CGP_specimen_1403898 miss EGA Analysis Accession.
+2017-07-19 10:42:33,980 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353470 with specimen: CGP_specimen_1403898 miss EGA Analysis Accession.
+2017-07-19 10:42:33,981 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353471 with specimen: CGP_specimen_1403899 miss EGA Analysis Accession.
+2017-07-19 10:42:33,981 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353471 with specimen: CGP_specimen_1403899 miss EGA Analysis Accession.
+2017-07-19 10:42:33,981 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353476 with specimen: CGP_specimen_1403904 miss EGA Analysis Accession.
+2017-07-19 10:42:33,981 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353476 with specimen: CGP_specimen_1403904 miss EGA Analysis Accession.
+2017-07-19 10:42:33,981 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353477 with specimen: CGP_specimen_1403905 miss EGA Analysis Accession.
+2017-07-19 10:42:33,981 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353477 with specimen: CGP_specimen_1403905 miss EGA Analysis Accession.
+2017-07-19 10:42:33,981 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353479 with specimen: CGP_specimen_1403907 miss EGA Analysis Accession.
+2017-07-19 10:42:33,981 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353479 with specimen: CGP_specimen_1403907 miss EGA Analysis Accession.
+2017-07-19 10:42:33,981 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353489 with specimen: CGP_specimen_1403917 miss EGA Analysis Accession.
+2017-07-19 10:42:33,981 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353489 with specimen: CGP_specimen_1403917 miss EGA Analysis Accession.
+2017-07-19 10:42:33,981 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353492 with specimen: CGP_specimen_1403920 miss EGA Analysis Accession.
+2017-07-19 10:42:33,981 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353492 with specimen: CGP_specimen_1403920 miss EGA Analysis Accession.
+2017-07-19 10:42:33,982 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353496 with specimen: CGP_specimen_1403924 miss EGA Analysis Accession.
+2017-07-19 10:42:33,982 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353496 with specimen: CGP_specimen_1403924 miss EGA Analysis Accession.
+2017-07-19 10:42:33,982 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353496 with specimen: CGP_specimen_1403924 miss EGA Analysis Accession.
+2017-07-19 10:42:33,982 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353496 with specimen: CGP_specimen_1439862 miss EGA Analysis Accession.
+2017-07-19 10:42:33,982 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353505 with specimen: CGP_specimen_1403933 miss EGA Analysis Accession.
+2017-07-19 10:42:33,982 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353505 with specimen: CGP_specimen_1403933 miss EGA Analysis Accession.
+2017-07-19 10:42:33,982 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353507 with specimen: CGP_specimen_1403935 miss EGA Analysis Accession.
+2017-07-19 10:42:33,982 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353507 with specimen: CGP_specimen_1403935 miss EGA Analysis Accession.
+2017-07-19 10:42:33,982 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353507 with specimen: CGP_specimen_1403935 miss EGA Analysis Accession.
+2017-07-19 10:42:33,982 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353507 with specimen: CGP_specimen_1490505 miss EGA Analysis Accession.
+2017-07-19 10:42:33,982 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353511 with specimen: CGP_specimen_1403939 miss EGA Analysis Accession.
+2017-07-19 10:42:33,983 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353511 with specimen: CGP_specimen_1403939 miss EGA Analysis Accession.
+2017-07-19 10:42:33,983 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353514 with specimen: CGP_specimen_1403942 miss EGA Analysis Accession.
+2017-07-19 10:42:33,983 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353514 with specimen: CGP_specimen_1403942 miss EGA Analysis Accession.
+2017-07-19 10:42:33,983 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353516 with specimen: CGP_specimen_1403944 miss EGA Analysis Accession.
+2017-07-19 10:42:33,983 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353516 with specimen: CGP_specimen_1403944 miss EGA Analysis Accession.
+2017-07-19 10:42:33,983 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353518 with specimen: CGP_specimen_1403946 miss EGA Analysis Accession.
+2017-07-19 10:42:33,983 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353518 with specimen: CGP_specimen_1403946 miss EGA Analysis Accession.
+2017-07-19 10:42:33,983 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353521 with specimen: CGP_specimen_1403949 miss EGA Analysis Accession.
+2017-07-19 10:42:33,983 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353521 with specimen: CGP_specimen_1403949 miss EGA Analysis Accession.
+2017-07-19 10:42:33,983 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353525 with specimen: CGP_specimen_1403953 miss EGA Analysis Accession.
+2017-07-19 10:42:33,983 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353525 with specimen: CGP_specimen_1403953 miss EGA Analysis Accession.
+2017-07-19 10:42:33,984 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353526 with specimen: CGP_specimen_1403954 miss EGA Analysis Accession.
+2017-07-19 10:42:33,984 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353526 with specimen: CGP_specimen_1403954 miss EGA Analysis Accession.
+2017-07-19 10:42:33,984 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353527 with specimen: CGP_specimen_1403955 miss EGA Analysis Accession.
+2017-07-19 10:42:33,984 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353527 with specimen: CGP_specimen_1403955 miss EGA Analysis Accession.
+2017-07-19 10:42:33,984 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353529 with specimen: CGP_specimen_1403957 miss EGA Analysis Accession.
+2017-07-19 10:42:33,984 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353529 with specimen: CGP_specimen_1403957 miss EGA Analysis Accession.
+2017-07-19 10:42:33,984 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353533 with specimen: CGP_specimen_1403961 miss EGA Analysis Accession.
+2017-07-19 10:42:33,984 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353533 with specimen: CGP_specimen_1403961 miss EGA Analysis Accession.
+2017-07-19 10:42:33,984 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353534 with specimen: CGP_specimen_1403962 miss EGA Analysis Accession.
+2017-07-19 10:42:33,984 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353534 with specimen: CGP_specimen_1403962 miss EGA Analysis Accession.
+2017-07-19 10:42:33,984 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353536 with specimen: CGP_specimen_1403964 miss EGA Analysis Accession.
+2017-07-19 10:42:33,985 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353536 with specimen: CGP_specimen_1403964 miss EGA Analysis Accession.
+2017-07-19 10:42:33,985 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353538 with specimen: CGP_specimen_1403966 miss EGA Analysis Accession.
+2017-07-19 10:42:33,985 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353538 with specimen: CGP_specimen_1403966 miss EGA Analysis Accession.
+2017-07-19 10:42:33,985 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353543 with specimen: CGP_specimen_1403971 miss EGA Analysis Accession.
+2017-07-19 10:42:33,985 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353543 with specimen: CGP_specimen_1403971 miss EGA Analysis Accession.
+2017-07-19 10:42:33,985 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353548 with specimen: CGP_specimen_1403976 miss EGA Analysis Accession.
+2017-07-19 10:42:33,985 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353548 with specimen: CGP_specimen_1403976 miss EGA Analysis Accession.
+2017-07-19 10:42:33,985 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353550 with specimen: CGP_specimen_1403978 miss EGA Analysis Accession.
+2017-07-19 10:42:33,985 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353550 with specimen: CGP_specimen_1403978 miss EGA Analysis Accession.
+2017-07-19 10:42:33,985 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353582 with specimen: CGP_specimen_1404010 miss EGA Analysis Accession.
+2017-07-19 10:42:33,985 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353582 with specimen: CGP_specimen_1404010 miss EGA Analysis Accession.
+2017-07-19 10:42:33,986 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353583 with specimen: CGP_specimen_1404011 miss EGA Analysis Accession.
+2017-07-19 10:42:33,986 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353583 with specimen: CGP_specimen_1404011 miss EGA Analysis Accession.
+2017-07-19 10:42:33,986 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353584 with specimen: CGP_specimen_1404012 miss EGA Analysis Accession.
+2017-07-19 10:42:33,986 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353584 with specimen: CGP_specimen_1404012 miss EGA Analysis Accession.
+2017-07-19 10:42:33,986 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356775 with specimen: CGP_specimen_1407377 miss EGA Analysis Accession.
+2017-07-19 10:42:33,986 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356775 with specimen: CGP_specimen_1407377 miss EGA Analysis Accession.
+2017-07-19 10:42:33,986 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356778 with specimen: CGP_specimen_1407380 miss EGA Analysis Accession.
+2017-07-19 10:42:33,986 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356778 with specimen: CGP_specimen_1407380 miss EGA Analysis Accession.
+2017-07-19 10:42:33,986 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356779 with specimen: CGP_specimen_1407381 miss EGA Analysis Accession.
+2017-07-19 10:42:33,986 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356779 with specimen: CGP_specimen_1407381 miss EGA Analysis Accession.
+2017-07-19 10:42:33,986 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356788 with specimen: CGP_specimen_1407390 miss EGA Analysis Accession.
+2017-07-19 10:42:33,986 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356788 with specimen: CGP_specimen_1407390 miss EGA Analysis Accession.
+2017-07-19 10:42:33,987 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356801 with specimen: CGP_specimen_1407403 miss EGA Analysis Accession.
+2017-07-19 10:42:33,987 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356801 with specimen: CGP_specimen_1407403 miss EGA Analysis Accession.
+2017-07-19 10:42:33,987 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356803 with specimen: CGP_specimen_1407405 miss EGA Analysis Accession.
+2017-07-19 10:42:33,987 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356803 with specimen: CGP_specimen_1407405 miss EGA Analysis Accession.
+2017-07-19 10:42:33,987 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356813 with specimen: CGP_specimen_1407415 miss EGA Analysis Accession.
+2017-07-19 10:42:33,987 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356813 with specimen: CGP_specimen_1407415 miss EGA Analysis Accession.
+2017-07-19 10:42:33,987 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356816 with specimen: CGP_specimen_1407418 miss EGA Analysis Accession.
+2017-07-19 10:42:33,987 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356816 with specimen: CGP_specimen_1407418 miss EGA Analysis Accession.
+2017-07-19 10:42:33,987 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356818 with specimen: CGP_specimen_1407420 miss EGA Analysis Accession.
+2017-07-19 10:42:33,987 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356818 with specimen: CGP_specimen_1407420 miss EGA Analysis Accession.
+2017-07-19 10:42:33,987 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356819 with specimen: CGP_specimen_1407421 miss EGA Analysis Accession.
+2017-07-19 10:42:33,987 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356819 with specimen: CGP_specimen_1407421 miss EGA Analysis Accession.
+2017-07-19 10:42:33,988 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356841 with specimen: CGP_specimen_1407443 miss EGA Analysis Accession.
+2017-07-19 10:42:33,988 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356841 with specimen: CGP_specimen_1407443 miss EGA Analysis Accession.
+2017-07-19 10:42:33,988 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356849 with specimen: CGP_specimen_1407451 miss EGA Analysis Accession.
+2017-07-19 10:42:33,988 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356849 with specimen: CGP_specimen_1407451 miss EGA Analysis Accession.
+2017-07-19 10:42:33,988 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356852 with specimen: CGP_specimen_1407454 miss EGA Analysis Accession.
+2017-07-19 10:42:33,988 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356852 with specimen: CGP_specimen_1407454 miss EGA Analysis Accession.
+2017-07-19 10:42:33,988 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356854 with specimen: CGP_specimen_1407456 miss EGA Analysis Accession.
+2017-07-19 10:42:33,988 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356854 with specimen: CGP_specimen_1407456 miss EGA Analysis Accession.
+2017-07-19 10:42:33,988 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356858 with specimen: CGP_specimen_1407460 miss EGA Analysis Accession.
+2017-07-19 10:42:33,988 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356858 with specimen: CGP_specimen_1407460 miss EGA Analysis Accession.
+2017-07-19 10:42:33,988 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356865 with specimen: CGP_specimen_1407467 miss EGA Analysis Accession.
+2017-07-19 10:42:33,988 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356865 with specimen: CGP_specimen_1407467 miss EGA Analysis Accession.
+2017-07-19 10:42:33,989 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356869 with specimen: CGP_specimen_1407471 miss EGA Analysis Accession.
+2017-07-19 10:42:33,989 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356869 with specimen: CGP_specimen_1407471 miss EGA Analysis Accession.
+2017-07-19 10:42:33,989 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356883 with specimen: CGP_specimen_1407485 miss EGA Analysis Accession.
+2017-07-19 10:42:33,989 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356883 with specimen: CGP_specimen_1407485 miss EGA Analysis Accession.
+2017-07-19 10:42:33,989 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356887 with specimen: CGP_specimen_1407489 miss EGA Analysis Accession.
+2017-07-19 10:42:33,989 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356887 with specimen: CGP_specimen_1407489 miss EGA Analysis Accession.
+2017-07-19 10:42:33,989 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356890 with specimen: CGP_specimen_1407492 miss EGA Analysis Accession.
+2017-07-19 10:42:33,989 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356890 with specimen: CGP_specimen_1407492 miss EGA Analysis Accession.
+2017-07-19 10:42:33,989 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356891 with specimen: CGP_specimen_1407493 miss EGA Analysis Accession.
+2017-07-19 10:42:33,989 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356891 with specimen: CGP_specimen_1407493 miss EGA Analysis Accession.
+2017-07-19 10:42:33,989 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356892 with specimen: CGP_specimen_1407494 miss EGA Analysis Accession.
+2017-07-19 10:42:33,989 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1356892 with specimen: CGP_specimen_1407494 miss EGA Analysis Accession.
+2017-07-19 10:42:33,989 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364163 with specimen: CGP_specimen_1415078 miss EGA Analysis Accession.
+2017-07-19 10:42:33,989 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364163 with specimen: CGP_specimen_1415078 miss EGA Analysis Accession.
+2017-07-19 10:42:33,990 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364165 with specimen: CGP_specimen_1415080 miss EGA Analysis Accession.
+2017-07-19 10:42:33,990 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364165 with specimen: CGP_specimen_1415080 miss EGA Analysis Accession.
+2017-07-19 10:42:33,990 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364168 with specimen: CGP_specimen_1415083 miss EGA Analysis Accession.
+2017-07-19 10:42:33,990 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364168 with specimen: CGP_specimen_1415083 miss EGA Analysis Accession.
+2017-07-19 10:42:33,990 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364169 with specimen: CGP_specimen_1415084 miss EGA Analysis Accession.
+2017-07-19 10:42:33,990 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364169 with specimen: CGP_specimen_1415084 miss EGA Analysis Accession.
+2017-07-19 10:42:33,990 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364170 with specimen: CGP_specimen_1415085 miss EGA Analysis Accession.
+2017-07-19 10:42:33,990 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364170 with specimen: CGP_specimen_1415085 miss EGA Analysis Accession.
+2017-07-19 10:42:33,990 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364177 with specimen: CGP_specimen_1415092 miss EGA Analysis Accession.
+2017-07-19 10:42:33,990 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364177 with specimen: CGP_specimen_1415092 miss EGA Analysis Accession.
+2017-07-19 10:42:33,991 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364179 with specimen: CGP_specimen_1415094 miss EGA Analysis Accession.
+2017-07-19 10:42:33,991 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364179 with specimen: CGP_specimen_1415094 miss EGA Analysis Accession.
+2017-07-19 10:42:33,991 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364184 with specimen: CGP_specimen_1415099 miss EGA Analysis Accession.
+2017-07-19 10:42:33,991 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364184 with specimen: CGP_specimen_1415099 miss EGA Analysis Accession.
+2017-07-19 10:42:33,991 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364185 with specimen: CGP_specimen_1415100 miss EGA Analysis Accession.
+2017-07-19 10:42:33,991 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364185 with specimen: CGP_specimen_1415100 miss EGA Analysis Accession.
+2017-07-19 10:42:33,992 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364187 with specimen: CGP_specimen_1415102 miss EGA Analysis Accession.
+2017-07-19 10:42:33,992 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364187 with specimen: CGP_specimen_1415102 miss EGA Analysis Accession.
+2017-07-19 10:42:33,992 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364188 with specimen: CGP_specimen_1415103 miss EGA Analysis Accession.
+2017-07-19 10:42:33,992 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364188 with specimen: CGP_specimen_1415103 miss EGA Analysis Accession.
+2017-07-19 10:42:33,992 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364191 with specimen: CGP_specimen_1415106 miss EGA Analysis Accession.
+2017-07-19 10:42:33,992 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364191 with specimen: CGP_specimen_1415106 miss EGA Analysis Accession.
+2017-07-19 10:42:33,992 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364194 with specimen: CGP_specimen_1415109 miss EGA Analysis Accession.
+2017-07-19 10:42:33,993 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364194 with specimen: CGP_specimen_1415109 miss EGA Analysis Accession.
+2017-07-19 10:42:33,993 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364198 with specimen: CGP_specimen_1415113 miss EGA Analysis Accession.
+2017-07-19 10:42:33,993 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364198 with specimen: CGP_specimen_1415113 miss EGA Analysis Accession.
+2017-07-19 10:42:33,993 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364201 with specimen: CGP_specimen_1415116 miss EGA Analysis Accession.
+2017-07-19 10:42:33,993 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364201 with specimen: CGP_specimen_1415116 miss EGA Analysis Accession.
+2017-07-19 10:42:33,993 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364205 with specimen: CGP_specimen_1415120 miss EGA Analysis Accession.
+2017-07-19 10:42:33,993 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364205 with specimen: CGP_specimen_1415120 miss EGA Analysis Accession.
+2017-07-19 10:42:33,993 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364208 with specimen: CGP_specimen_1415123 miss EGA Analysis Accession.
+2017-07-19 10:42:33,994 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364208 with specimen: CGP_specimen_1415123 miss EGA Analysis Accession.
+2017-07-19 10:42:33,994 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364209 with specimen: CGP_specimen_1415124 miss EGA Analysis Accession.
+2017-07-19 10:42:33,994 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364209 with specimen: CGP_specimen_1415124 miss EGA Analysis Accession.
+2017-07-19 10:42:33,994 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364223 with specimen: CGP_specimen_1415138 miss EGA Analysis Accession.
+2017-07-19 10:42:33,994 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364223 with specimen: CGP_specimen_1415138 miss EGA Analysis Accession.
+2017-07-19 10:42:33,994 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364225 with specimen: CGP_specimen_1415140 miss EGA Analysis Accession.
+2017-07-19 10:42:33,994 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364225 with specimen: CGP_specimen_1415140 miss EGA Analysis Accession.
+2017-07-19 10:42:33,994 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364227 with specimen: CGP_specimen_1415142 miss EGA Analysis Accession.
+2017-07-19 10:42:33,994 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1364227 with specimen: CGP_specimen_1415142 miss EGA Analysis Accession.
+2017-07-19 10:42:33,994 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_649726 with specimen: CGP_specimen_668688 miss EGA Analysis Accession.
+2017-07-19 10:42:33,994 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_653560 with specimen: CGP_specimen_672522 miss EGA Analysis Accession.
+2017-07-19 10:42:33,995 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_653597 with specimen: CGP_specimen_672559 miss EGA Analysis Accession.
+2017-07-19 10:42:33,995 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_806717 with specimen: CGP_specimen_824512 miss EGA Analysis Accession.
+2017-07-19 10:42:33,995 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_807848 with specimen: CGP_specimen_825637 miss EGA Analysis Accession.
+2017-07-19 10:42:33,995 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_808176 with specimen: CGP_specimen_825965 miss EGA Analysis Accession.
+2017-07-19 10:42:33,995 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_810652 with specimen: CGP_specimen_828435 miss EGA Analysis Accession.
+2017-07-19 10:42:33,995 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_846424 with specimen: CGP_specimen_865021 miss EGA Analysis Accession.
+2017-07-19 10:42:33,995 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_846424 with specimen: CGP_specimen_865022 miss EGA Analysis Accession.
+2017-07-19 10:42:33,995 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_980848 with specimen: CGP_specimen_1004978 miss EGA Analysis Accession.
+2017-07-19 10:42:33,995 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_980848 with specimen: CGP_specimen_1004965 miss EGA Analysis Accession.
+2017-07-19 10:42:33,995 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1163904 with specimen: CGP_specimen_1192107 miss EGA File Accession.
+2017-07-19 10:42:33,996 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1163904 with specimen: CGP_specimen_1192107 miss EGA File Accession.
+2017-07-19 10:42:33,996 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1163904 with specimen: CGP_specimen_1192107 miss EGA File Accession.
+2017-07-19 10:42:33,996 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1163904 with specimen: CGP_specimen_1192108 miss EGA File Accession.
+2017-07-19 10:42:33,996 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1163904 with specimen: CGP_specimen_1192108 miss EGA File Accession.
+2017-07-19 10:42:33,996 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1163904 with specimen: CGP_specimen_1192108 miss EGA File Accession.
+2017-07-19 10:42:33,996 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215615 with specimen: CGP_specimen_1244883 miss EGA Run Accession.
+2017-07-19 10:42:33,996 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215615 with specimen: CGP_specimen_1244884 miss EGA Run Accession.
+2017-07-19 10:42:33,996 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215616 with specimen: CGP_specimen_1244885 miss EGA Run Accession.
+2017-07-19 10:42:33,996 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215616 with specimen: CGP_specimen_1244886 miss EGA Run Accession.
+2017-07-19 10:42:33,996 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215617 with specimen: CGP_specimen_1244887 miss EGA Run Accession.
+2017-07-19 10:42:33,996 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215617 with specimen: CGP_specimen_1244888 miss EGA Run Accession.
+2017-07-19 10:42:33,997 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215620 with specimen: CGP_specimen_1244893 miss EGA Run Accession.
+2017-07-19 10:42:33,997 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215620 with specimen: CGP_specimen_1244894 miss EGA Run Accession.
+2017-07-19 10:42:33,997 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215622 with specimen: CGP_specimen_1244897 miss EGA Run Accession.
+2017-07-19 10:42:33,997 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215622 with specimen: CGP_specimen_1244898 miss EGA Run Accession.
+2017-07-19 10:42:33,997 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215623 with specimen: CGP_specimen_1244899 miss EGA Run Accession.
+2017-07-19 10:42:33,997 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1215623 with specimen: CGP_specimen_1244900 miss EGA Run Accession.
+2017-07-19 10:42:33,998 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1234205 with specimen: CGP_specimen_1266756 miss EGA Run Accession.
+2017-07-19 10:42:33,998 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1309158 with specimen: CGP_specimen_1342108 miss EGA Run Accession.
+2017-07-19 10:42:33,998 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1309158 with specimen: CGP_specimen_1342109 miss EGA Run Accession.
+2017-07-19 10:42:33,998 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1309177 with specimen: CGP_specimen_1342137 miss EGA Run Accession.
+2017-07-19 10:42:33,998 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1309187 with specimen: CGP_specimen_1342148 miss EGA Run Accession.
+2017-07-19 10:42:33,998 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1309187 with specimen: CGP_specimen_1342147 miss EGA Run Accession.
+2017-07-19 10:42:34,008 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353496 with specimen: CGP_specimen_1403924 miss EGA File Accession.
+2017-07-19 10:42:34,008 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353496 with specimen: CGP_specimen_1439862 miss EGA File Accession.
+2017-07-19 10:42:34,008 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353507 with specimen: CGP_specimen_1403935 miss EGA File Accession.
+2017-07-19 10:42:34,008 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_1353507 with specimen: CGP_specimen_1490505 miss EGA File Accession.
+2017-07-19 10:42:34,015 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_649726 with specimen: CGP_specimen_668688 miss EGA Run Accession.
+2017-07-19 10:42:34,015 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_653560 with specimen: CGP_specimen_672522 miss EGA Run Accession.
+2017-07-19 10:42:34,015 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_653597 with specimen: CGP_specimen_672559 miss EGA Run Accession.
+2017-07-19 10:42:34,015 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_806717 with specimen: CGP_specimen_824512 miss EGA Run Accession.
+2017-07-19 10:42:34,015 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_807848 with specimen: CGP_specimen_825637 miss EGA Run Accession.
+2017-07-19 10:42:34,015 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_808176 with specimen: CGP_specimen_825965 miss EGA Run Accession.
+2017-07-19 10:42:34,015 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_810652 with specimen: CGP_specimen_828435 miss EGA Run Accession.
+2017-07-19 10:42:34,015 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_846424 with specimen: CGP_specimen_865021 miss EGA Run Accession.
+2017-07-19 10:42:34,015 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_846424 with specimen: CGP_specimen_865022 miss EGA Run Accession.
+2017-07-19 10:42:34,015 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_980848 with specimen: CGP_specimen_1004978 miss EGA Run Accession.
+2017-07-19 10:42:34,015 - audit.stage - WARNING - Donor CMDI-UK::CGP_donor_980848 with specimen: CGP_specimen_1004965 miss EGA Run Accession.
+2017-07-19 10:43:24,473 - job - WARNING - Donor CMDI-UK::CGP_donor_1163904 has file: 4061_5.bam.gpg which is missing EGA File Accession.
+2017-07-19 10:43:24,474 - job - WARNING - Donor CMDI-UK::CGP_donor_1163904 has file: 4171_5.bam.gpg which is missing EGA File Accession.
+2017-07-19 10:43:24,474 - job - WARNING - Donor CMDI-UK::CGP_donor_1163904 has file: 4171_6.bam.gpg which is missing EGA File Accession.
+2017-07-19 10:43:24,474 - job - WARNING - Donor CMDI-UK::CGP_donor_1163904 has file: 4081_3.bam.gpg which is missing EGA File Accession.
+2017-07-19 10:43:24,474 - job - WARNING - Donor CMDI-UK::CGP_donor_1163904 has file: 4085_2.bam.gpg which is missing EGA File Accession.
+2017-07-19 10:43:24,474 - job - WARNING - Donor CMDI-UK::CGP_donor_1163904 has file: 4085_3.bam.gpg which is missing EGA File Accession.
+2017-07-19 10:43:24,474 - job - WARNING - Donor CMDI-UK::CGP_donor_1215615 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,475 - job - WARNING - Donor CMDI-UK::CGP_donor_1215615 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,475 - job - WARNING - Donor CMDI-UK::CGP_donor_1215616 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,475 - job - WARNING - Donor CMDI-UK::CGP_donor_1215616 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,475 - job - WARNING - Donor CMDI-UK::CGP_donor_1215617 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,475 - job - WARNING - Donor CMDI-UK::CGP_donor_1215617 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,475 - job - WARNING - Donor CMDI-UK::CGP_donor_1215620 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,475 - job - WARNING - Donor CMDI-UK::CGP_donor_1215620 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,475 - job - WARNING - Donor CMDI-UK::CGP_donor_1215622 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,475 - job - WARNING - Donor CMDI-UK::CGP_donor_1215622 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,476 - job - WARNING - Donor CMDI-UK::CGP_donor_1215623 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,476 - job - WARNING - Donor CMDI-UK::CGP_donor_1215623 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,476 - job - WARNING - Donor CMDI-UK::CGP_donor_1234205 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,476 - job - WARNING - Donor CMDI-UK::CGP_donor_1309158 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,476 - job - WARNING - Donor CMDI-UK::CGP_donor_1309158 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,476 - job - WARNING - Donor CMDI-UK::CGP_donor_1309177 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,476 - job - WARNING - Donor CMDI-UK::CGP_donor_1309187 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,476 - job - WARNING - Donor CMDI-UK::CGP_donor_1309187 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,477 - job - WARNING - Donor CMDI-UK::CGP_donor_1353496 has file: 6555_6#2.bam.gpg which is missing EGA File Accession.
+2017-07-19 10:43:24,477 - job - WARNING - Donor CMDI-UK::CGP_donor_1353496 has file: 6571_2#10.bam.gpg which is missing EGA File Accession.
+2017-07-19 10:43:24,478 - job - WARNING - Donor CMDI-UK::CGP_donor_1353507 has file: 6816_2#1.bam.gpg which is missing EGA File Accession.
+2017-07-19 10:43:24,478 - job - WARNING - Donor CMDI-UK::CGP_donor_1353507 has file: 6816_2#2.bam.gpg which is missing EGA File Accession.
+2017-07-19 10:43:24,480 - job - WARNING - Donor CMDI-UK::CGP_donor_649726 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,480 - job - WARNING - Donor CMDI-UK::CGP_donor_653560 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,481 - job - WARNING - Donor CMDI-UK::CGP_donor_653597 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,481 - job - WARNING - Donor CMDI-UK::CGP_donor_806717 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,481 - job - WARNING - Donor CMDI-UK::CGP_donor_807848 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,481 - job - WARNING - Donor CMDI-UK::CGP_donor_808176 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,481 - job - WARNING - Donor CMDI-UK::CGP_donor_810652 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,481 - job - WARNING - Donor CMDI-UK::CGP_donor_846424 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,481 - job - WARNING - Donor CMDI-UK::CGP_donor_846424 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,481 - job - WARNING - Donor CMDI-UK::CGP_donor_980848 has file:  which is missing EGA File Accession.
+2017-07-19 10:43:24,481 - job - WARNING - Donor CMDI-UK::CGP_donor_980848 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,718 - job - WARNING - Donor CMDI-UK::CGP_donor_1163904 with specimen: CGP_specimen_1192107 has file: 4061_5.bam.gpg which is missing EGA File Accession.
+2017-07-19 10:45:54,718 - job - WARNING - Donor CMDI-UK::CGP_donor_1163904 with specimen: CGP_specimen_1192107 has file: 4171_5.bam.gpg which is missing EGA File Accession.
+2017-07-19 10:45:54,719 - job - WARNING - Donor CMDI-UK::CGP_donor_1163904 with specimen: CGP_specimen_1192107 has file: 4171_6.bam.gpg which is missing EGA File Accession.
+2017-07-19 10:45:54,719 - job - WARNING - Donor CMDI-UK::CGP_donor_1163904 with specimen: CGP_specimen_1192108 has file: 4081_3.bam.gpg which is missing EGA File Accession.
+2017-07-19 10:45:54,719 - job - WARNING - Donor CMDI-UK::CGP_donor_1163904 with specimen: CGP_specimen_1192108 has file: 4085_2.bam.gpg which is missing EGA File Accession.
+2017-07-19 10:45:54,719 - job - WARNING - Donor CMDI-UK::CGP_donor_1163904 with specimen: CGP_specimen_1192108 has file: 4085_3.bam.gpg which is missing EGA File Accession.
+2017-07-19 10:45:54,719 - job - WARNING - Donor CMDI-UK::CGP_donor_1215615 with specimen: CGP_specimen_1244883 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,719 - job - WARNING - Donor CMDI-UK::CGP_donor_1215615 with specimen: CGP_specimen_1244884 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,719 - job - WARNING - Donor CMDI-UK::CGP_donor_1215616 with specimen: CGP_specimen_1244885 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,719 - job - WARNING - Donor CMDI-UK::CGP_donor_1215616 with specimen: CGP_specimen_1244886 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,719 - job - WARNING - Donor CMDI-UK::CGP_donor_1215617 with specimen: CGP_specimen_1244887 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,719 - job - WARNING - Donor CMDI-UK::CGP_donor_1215617 with specimen: CGP_specimen_1244888 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,719 - job - WARNING - Donor CMDI-UK::CGP_donor_1215620 with specimen: CGP_specimen_1244893 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,719 - job - WARNING - Donor CMDI-UK::CGP_donor_1215620 with specimen: CGP_specimen_1244894 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,719 - job - WARNING - Donor CMDI-UK::CGP_donor_1215622 with specimen: CGP_specimen_1244897 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,719 - job - WARNING - Donor CMDI-UK::CGP_donor_1215622 with specimen: CGP_specimen_1244898 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,720 - job - WARNING - Donor CMDI-UK::CGP_donor_1215623 with specimen: CGP_specimen_1244899 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,720 - job - WARNING - Donor CMDI-UK::CGP_donor_1215623 with specimen: CGP_specimen_1244900 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,720 - job - WARNING - Donor CMDI-UK::CGP_donor_1234205 with specimen: CGP_specimen_1266756 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,720 - job - WARNING - Donor CMDI-UK::CGP_donor_1309158 with specimen: CGP_specimen_1342108 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,720 - job - WARNING - Donor CMDI-UK::CGP_donor_1309158 with specimen: CGP_specimen_1342109 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,720 - job - WARNING - Donor CMDI-UK::CGP_donor_1309177 with specimen: CGP_specimen_1342137 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,720 - job - WARNING - Donor CMDI-UK::CGP_donor_1309187 with specimen: CGP_specimen_1342148 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,721 - job - WARNING - Donor CMDI-UK::CGP_donor_1309187 with specimen: CGP_specimen_1342147 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,722 - job - WARNING - Donor CMDI-UK::CGP_donor_1353496 with specimen: CGP_specimen_1403924 has file: 6555_6#2.bam.gpg which is missing EGA File Accession.
+2017-07-19 10:45:54,722 - job - WARNING - Donor CMDI-UK::CGP_donor_1353496 with specimen: CGP_specimen_1439862 has file: 6571_2#10.bam.gpg which is missing EGA File Accession.
+2017-07-19 10:45:54,722 - job - WARNING - Donor CMDI-UK::CGP_donor_1353507 with specimen: CGP_specimen_1403935 has file: 6816_2#1.bam.gpg which is missing EGA File Accession.
+2017-07-19 10:45:54,722 - job - WARNING - Donor CMDI-UK::CGP_donor_1353507 with specimen: CGP_specimen_1490505 has file: 6816_2#2.bam.gpg which is missing EGA File Accession.
+2017-07-19 10:45:54,723 - job - WARNING - Donor CMDI-UK::CGP_donor_649726 with specimen: CGP_specimen_668688 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,723 - job - WARNING - Donor CMDI-UK::CGP_donor_653560 with specimen: CGP_specimen_672522 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,723 - job - WARNING - Donor CMDI-UK::CGP_donor_653597 with specimen: CGP_specimen_672559 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,724 - job - WARNING - Donor CMDI-UK::CGP_donor_806717 with specimen: CGP_specimen_824512 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,724 - job - WARNING - Donor CMDI-UK::CGP_donor_807848 with specimen: CGP_specimen_825637 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,724 - job - WARNING - Donor CMDI-UK::CGP_donor_808176 with specimen: CGP_specimen_825965 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,724 - job - WARNING - Donor CMDI-UK::CGP_donor_810652 with specimen: CGP_specimen_828435 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,724 - job - WARNING - Donor CMDI-UK::CGP_donor_846424 with specimen: CGP_specimen_865021 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,724 - job - WARNING - Donor CMDI-UK::CGP_donor_846424 with specimen: CGP_specimen_865022 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,724 - job - WARNING - Donor CMDI-UK::CGP_donor_980848 with specimen: CGP_specimen_1004978 has file:  which is missing EGA File Accession.
+2017-07-19 10:45:54,724 - job - WARNING - Donor CMDI-UK::CGP_donor_980848 with specimen: CGP_specimen_1004965 has file:  which is missing EGA File Accession.

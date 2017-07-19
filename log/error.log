@@ -1,0 +1,3 @@
+2017-07-19 10:31:25,912 - __main__ - ERROR - Command '['ascp', '-QTl', '100m', '--ignore-host-key', '--mode=recv', '--host=xfer.crg.eu', '--user=dboxICGC', 'dbox_content', '.']' returned non-zero exit status 1
+2017-07-19 10:36:51,459 - __main__ - ERROR - Command '['ascp', '-QTl', '100m', '--ignore-host-key', '--mode=recv', '--host=xfer.crg.eu', '--user=dboxICGC', 'dbox_content', '.']' returned non-zero exit status 1
+2017-07-19 10:39:14,837 - __main__ - ERROR - Command '['ascp', '-QTl', '100m', '--ignore-host-key', '--mode=recv', '--host=xfer.crg.eu', '--user=dboxICGC', 'dbox_content', '.']' returned non-zero exit status 1

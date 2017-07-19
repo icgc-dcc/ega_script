@@ -7,7 +7,6 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-
 def generate(conf_dict, annotations, project, seq_strategy):
     # audit path
     file_path = conf_dict.get('ega_audit').get('file_path')
@@ -29,12 +28,23 @@ def generate(conf_dict, annotations, project, seq_strategy):
         with open(fname) as f:
             reader = csv.DictReader(f, delimiter='\t')
             for l in reader:
-                # skip the files not staged
-                if not l.get('EGA File Accession') in annotations.get('staged').union(annotations.get('to_stage')): continue
+                # skip the files which do not have EGA File Accession
+                if not l.get('EGA File Accession'):
+                    logger.warning('Donor %s::%s with specimen: %s has file: %s which is missing EGA File Accession.', l.get('ICGC DCC Project Code'), l.get('ICGC Submitted Donor ID'), l.get('ICGC Submitted Specimen ID'), l.get('EGA Raw Sequence Filename'))
+                    continue
+
+                # skip the files which do not belong to given library strategy
+                if seq_strategy and not l.get('ICGC Submitted Sequencing Strategy') in seq_strategy: continue
+
                 # skip the files generated
                 if l.get('EGA File Accession') in annotations.get('generated'): continue
-                # skip the files which does not belong to given library strategy
-                if seq_strategy and not l.get('ICGC Submitted Sequencing Strategy') in seq_strategy: continue
+
+                # # skip the files not staged or not to be staged
+                # if not l.get('EGA File Accession') in annotations.get('staged').union(annotations.get('to_stage')): continue
+                # skip the files not staged only for safty
+                if not l.get('EGA File Accession') in annotations.get('staged'): 
+                    logger.warning('%s has not been staged.', l.get('EGA File Accession'))
+                    continue
  
                 # skip the record if it has the same fid as the previous ones
                 if l.get('EGA File Accession') in ega_file_ids: 

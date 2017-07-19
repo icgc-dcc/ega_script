@@ -1,0 +1,12 @@
+2017-07-19 10:31:25,912 - __main__ - ERROR - Command '['ascp', '-QTl', '100m', '--ignore-host-key', '--mode=recv', '--host=xfer.crg.eu', '--user=dboxICGC', 'dbox_content', '.']' returned non-zero exit status 1
+2017-07-19 10:36:51,459 - __main__ - ERROR - Command '['ascp', '-QTl', '100m', '--ignore-host-key', '--mode=recv', '--host=xfer.crg.eu', '--user=dboxICGC', 'dbox_content', '.']' returned non-zero exit status 1
+2017-07-19 10:39:14,837 - __main__ - ERROR - Command '['ascp', '-QTl', '100m', '--ignore-host-key', '--mode=recv', '--host=xfer.crg.eu', '--user=dboxICGC', 'dbox_content', '.']' returned non-zero exit status 1
+2017-07-19 10:42:23,030 - __main__ - INFO - Update the ega_xml audit repo
+2017-07-19 10:42:31,715 - __main__ - INFO - Update the job repos
+2017-07-19 10:42:33,969 - __main__ - INFO - Generate list of files to be staged to server!
+2017-07-19 10:43:13,706 - __main__ - INFO - Update the ega_xml audit repo
+2017-07-19 10:43:22,470 - __main__ - INFO - Update the job repos
+2017-07-19 10:43:24,468 - __main__ - INFO - Generate jobs!
+2017-07-19 10:45:43,659 - __main__ - INFO - Update the ega_xml audit repo
+2017-07-19 10:45:52,445 - __main__ - INFO - Update the job repos
+2017-07-19 10:45:54,713 - __main__ - INFO - Generate jobs!
