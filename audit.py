@@ -58,13 +58,13 @@ def generate_files_to_stage(conf_dict, annotations, project, seq_strategy):
                     # QC the data
                     # skip the file if encrypted md5 = unencrypted md5
                     if fvalue['file_md5sum'] == fvalue['encrypted_file_md5sum']: 
-                        logger_stage.warning('%s:%s has the same file_md5sum and encrypted_file_md5sum: %s', project_code, fid, fvalue['file_md5sum'])
+                        logger_stage.warning('%s::%s has the same file_md5sum and encrypted_file_md5sum: %s', project_code, fid, fvalue['file_md5sum'])
                         continue
                     skip=False
                     for h in output_fields:
                         # skip the file if there is any id inconsistent
                         if not h in ['dataset_id'] and len(fvalue[h]) > 1:
-                            logger_stage.warning('%s has the id inconsistent: %s', fid, h) 
+                            logger_stage.warning('%s::%s has the id inconsistent: %s in audit report version %s', project_code, fid, h, file_version) 
                             skip=True
                     if skip: continue
 
@@ -99,5 +99,4 @@ def generate_files_to_remove(conf_dict, annotations):
                 f.write(ret)
                 logger_remove.info('fid: %s is to be removed from the server', fid)
             except subprocess.CalledProcessError:
-                logger_remove.warning('fid: %s is not on the server', fid)
                 continue      
