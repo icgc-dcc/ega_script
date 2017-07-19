@@ -28,13 +28,13 @@ def generate(conf_dict, annotations, project, seq_strategy):
         with open(fname) as f:
             reader = csv.DictReader(f, delimiter='\t')
             for l in reader:
+                # skip the files which do not belong to given library strategy
+                if seq_strategy and not l.get('ICGC Submitted Sequencing Strategy') in seq_strategy: continue
+
                 # skip the files which do not have EGA File Accession
                 if not l.get('EGA File Accession'):
                     logger.warning('Donor %s::%s with specimen: %s has file: %s which is missing EGA File Accession.', l.get('ICGC DCC Project Code'), l.get('ICGC Submitted Donor ID'), l.get('ICGC Submitted Specimen ID'), l.get('EGA Raw Sequence Filename'))
                     continue
-
-                # skip the files which do not belong to given library strategy
-                if seq_strategy and not l.get('ICGC Submitted Sequencing Strategy') in seq_strategy: continue
 
                 # skip the files generated
                 if l.get('EGA File Accession') in annotations.get('generated'): continue
