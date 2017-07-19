@@ -54,10 +54,6 @@ def generate_files_to_stage(conf_dict, annotations, project, seq_strategy):
 
                 ega_file_list = []
                 for fid, fvalue in ega_file.iteritems():
-                    # skip the files already staged on ASPERA
-                    if fid in annotations.get('staged'): continue 
-                    # skip the files already in job completed:
-                    if fid in annotations.get('completed'): continue
 
                     # QC the data
                     # skip the file if encrypted md5 = unencrypted md5
@@ -71,6 +67,11 @@ def generate_files_to_stage(conf_dict, annotations, project, seq_strategy):
                             logger_stage.warning('%s has the id inconsistent: %s', fid, h) 
                             skip=True
                     if skip: continue
+
+                    # skip the files already staged on ASPERA
+                    if fid in annotations.get('staged'): continue 
+                    # skip the files already in job completed:
+                    if fid in annotations.get('completed'): continue
 
                     ega_file_list.append(fvalue)
             

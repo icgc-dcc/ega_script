@@ -36,9 +36,6 @@ def generate(conf_dict, annotations, project, seq_strategy):
                     logger.warning('Donor %s::%s with specimen: %s has file: %s which is missing EGA File Accession.', l.get('ICGC DCC Project Code'), l.get('ICGC Submitted Donor ID'), l.get('ICGC Submitted Specimen ID'), l.get('EGA Raw Sequence Filename'))
                     continue
 
-                # skip the files generated
-                if l.get('EGA File Accession') in annotations.get('generated'): continue
-
                 # # skip the files not staged or not to be staged
                 # if not l.get('EGA File Accession') in annotations.get('staged').union(annotations.get('to_stage')): continue
                 # skip the files not staged only for safty
@@ -48,8 +45,11 @@ def generate(conf_dict, annotations, project, seq_strategy):
  
                 # skip the record if it has the same fid as the previous ones
                 if l.get('EGA File Accession') in ega_file_ids: 
-                    logger.warning('%s has more than one records in the dataset.', l.get('EGA File Accession'))
+                    logger.warning('File %s has more than one records in the audit report.', l.get('EGA File Accession'))
                     continue
+
+                # skip the files generated
+                if l.get('EGA File Accession') in annotations.get('generated'): continue
 
                 if l.get('EGA Analysis Accession'):
                     bundle_id = l.get('EGA Analysis Accession')
