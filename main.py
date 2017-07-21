@@ -49,12 +49,12 @@ def main(argv=None):
     # add annotations
     annotations = {}
     # download the dbox_content from aspera
-    # try:
-    #     subprocess.check_output(['ascp', '-QTl','100m','--ignore-host-key','--mode=recv','--host='+os.environ['ASCP_EGA_HOST'],'--user='+os.environ['ASCP_EGA_USER'], 'dbox_content', '.'])
-    #     logger.info('Download dbox_content from aspera server!')
-    # except Exception, err:
-    #     logger.error(str(err))
-    #     sys.exit(1)
+    try:
+        subprocess.check_output(['ascp', '-QTl','100m','--ignore-host-key','--mode=recv','--host='+os.environ['ASCP_EGA_HOST'],'--user='+os.environ['ASCP_EGA_USER'], 'dbox_content', '.'])
+        logger.info('Download dbox_content from aspera server!')
+    except Exception, err:
+        logger.error(str(err))
+        sys.exit(1)
     # add staged ega_file_id
     with open('dbox_content', 'r') as f:
         for l in f:
