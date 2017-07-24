@@ -13,11 +13,12 @@ logger_remove = logging.getLogger(__name__+'.remove')
 
 def generate_files_to_stage(conf_dict, annotations, project, seq_strategy):
     # audit path
+    ega_audit_base_path = conf_dict.get('ega_audit_base_path')
     file_path = conf_dict.get('ega_audit').get('file_path')
     file_version = conf_dict.get('ega_audit').get('file_version')
     file_pattern = conf_dict.get('ega_audit').get('file_pattern')
     # output path
-    output_path = conf_dict.get('ega_operation').get('file_path')
+    output_path = os.path.join(ega_audit_base_path, conf_dict.get('ega_operation').get('file_path'))
     to_stage_type = conf_dict.get('ega_operation').get('to_stage').get('type')
     mapping = conf_dict.get('ega_operation').get('to_stage').get('mapping')
 
@@ -25,7 +26,7 @@ def generate_files_to_stage(conf_dict, annotations, project, seq_strategy):
     os.makedirs(output_path)
 
     # generate the files need to be staged
-    files = glob.glob(os.path.join(file_path, file_version, file_pattern))
+    files = glob.glob(os.path.join(ega_audit_base_path, file_path, file_version, file_pattern))
     for fname in files:
         project_code = fname.split('/')[-2]
         # skip the project if not in the list of project
@@ -90,7 +91,7 @@ def generate_files_to_stage(conf_dict, annotations, project, seq_strategy):
 
 
 def generate_files_to_remove(conf_dict, annotations):
-    to_remove_file_name = os.path.join(conf_dict.get('ega_operation').get('file_path'), conf_dict.get('ega_operation').get('to_remove'))
+    to_remove_file_name = os.path.join(conf_dict.get('ega_audit_base_path'), conf_dict.get('ega_operation').get('file_path'), conf_dict.get('ega_operation').get('to_remove'))
     # generate the files to be removed
     with open(to_remove_file_name, 'w') as f:
         for fid in annotations.get('completed'):

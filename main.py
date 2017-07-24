@@ -17,7 +17,7 @@ import utils
 
 def main(argv=None):
 
-    parser = ArgumentParser(description="EGA transfer",
+    parser = ArgumentParser(description="EGA-file-to-colllab job generator and auditor",
              formatter_class=RawDescriptionHelpFormatter)
     parser.add_argument("-c", "--setting", dest="conf",
              help="Specify ega setting file", required=False)
@@ -66,7 +66,7 @@ def main(argv=None):
     # update the ega_xml audit repo
     try:
         origWD = os.getcwd()
-        os.chdir(conf_dict.get('ega_audit').get('file_path'))
+        os.chdir(os.path.join(conf_dict.get('ega_audit_base_path'), conf_dict.get('ega_audit').get('file_path')))
         subprocess.check_output("git checkout master", shell=True)
         subprocess.check_output("git pull", shell=True)
         os.chdir(origWD)
@@ -77,7 +77,7 @@ def main(argv=None):
 
 
     # get the fid which are to be staged by EGA
-    to_stage_file_pattern = os.path.join(conf_dict.get('ega_operation').get('file_path'), '*-*', 'to_stage_*.tsv')
+    to_stage_file_pattern = os.path.join(conf_dict.get('ega_audit_base_path'), conf_dict.get('ega_operation').get('file_path'), '*-*', 'to_stage_*.tsv')
     files = glob.glob(to_stage_file_pattern)
     for fname in files:
         with open(fname, 'r') as f:
@@ -87,7 +87,7 @@ def main(argv=None):
                  annotations['to_stage'].add(l.get('ega_file_id'))   
 
     # git pull the job repo
-    repo_list = glob.glob(conf_dict.get('ega_job').get('job_repo'))
+    repo_list = glob.glob(os.path.join(conf_dict.get('ega_job_base_path'), conf_dict.get('ega_job').get('job_repo')))
     for repo in repo_list:
         try:
             origWD = os.getcwd()

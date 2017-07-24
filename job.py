@@ -9,15 +9,17 @@ logger = logging.getLogger(__name__)
 
 def generate(conf_dict, annotations, project, seq_strategy):
     # audit path
+    ega_audit_base_path = conf_dict.get('ega_audit_base_path')
     file_path = conf_dict.get('ega_audit').get('file_path')
     file_version = conf_dict.get('ega_audit').get('file_version')
     file_pattern = conf_dict.get('ega_audit').get('file_pattern')
 
+    ega_job_base_path = conf_dict.get('ega_job_base_path')
     job_fields = conf_dict.get('ega_job').get('job').get('job_fields')
     mapping = conf_dict.get('ega_job').get('job').get('mapping')
     job_path = conf_dict.get('ega_job').get('job_folder')
 
-    files = glob.glob(os.path.join(file_path, file_version, file_pattern))
+    files = glob.glob(os.path.join(ega_audit_base_path, file_path, file_version, file_pattern))
     for fname in files:
         project_code = fname.split('/')[-2]
         # skip the project if not in the list of project
@@ -96,7 +98,7 @@ def generate(conf_dict, annotations, project, seq_strategy):
 
             # write the job json
             job_name = '.'.join(['job', bundle_id, job.get('project_code'), job.get('submitter_sample_id'), job.get('ega_sample_id'), 'json'])
-            with open(os.path.join(job_path, job_name), 'w') as f:
+            with open(os.path.join(ega_job_base_path, job_path, job_name), 'w') as f:
                 f.write(json.dumps(job, indent=4, sort_keys=True))
 
 
