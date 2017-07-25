@@ -10,7 +10,7 @@ The tool needs to talk to two different kinds of git repository to gather the in
 * Job repositories which are tracking ega-file-transfer-to-collab job status(e.g., http://142.1.177.124/jt-hub/ega-file-transfer-to-collab-jtracker)
 
 ### Prerequisites
-Before you can run the tool, you need to configure the tool. The configuration file locates `ega_script/conf/conf.yaml`. You may need to change the following two places accordingly.
+Before you can run the tool, you need to configure the tool. The configuration file locates `ega_script/conf/conf.yaml`. You may need to change the following two `base_path` for `ega_audit` and `ega_job` respectively.
 ```
 ega_audit_base_path: "../ega-file-transfer"
 ega_job_base_path: ".."
@@ -77,7 +77,7 @@ In order to get the list of files which are to be staged to Aspera server by EGA
 cd ega_script
 ./main.py -t stage
 ```
-You can specify the `project` and `seq_strategy` in order to get the list of files which are only for given sequence trategies and belong to given projects.
+You can specify the `project` and `seq_strategy` in order to get the list of files which are only for given sequence strategies and belong to given projects.
 The tool will generate `to_stage_*.tsv` files under each project. For example:
 ```
 ega_operation/
