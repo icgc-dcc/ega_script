@@ -44,6 +44,15 @@ def main(argv=None):
     with open(conf, 'r') as c:
         conf_dict = yaml.load(c)
 
+    # empty the log folder
+    try:
+        if os.path.exists('log'): shutil.rmtree('log')
+        os.makedirs('log')
+        logger.info('Empty the log folder')
+    except Exception, err:
+        logger.error(str(err))
+        sys.exit(1) 
+
     logger = logging.getLogger(__name__)
     utils.setup_logging()
 
@@ -76,15 +85,7 @@ def main(argv=None):
         logger.error(str(err))
         sys.exit(1)    
 
-    # empty the log folder
-    try:
-        if os.path.exists('log'): shutil.rmtree('log')
-        os.makedirs('log')
-        logger.info('Empty the log folder')
-    except Exception, err:
-        logger.error(str(err))
-        sys.exit(1)      
-
+     
     # get the fid which are to be staged by EGA
     to_stage_file_pattern = os.path.join(conf_dict.get('ega_audit_base_path'), conf_dict.get('ega_operation').get('file_path'), '*-*', 'to_stage_*.tsv')
     files = glob.glob(to_stage_file_pattern)
