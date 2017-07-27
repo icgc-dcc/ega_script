@@ -36,7 +36,18 @@ def main(argv=None):
     project = list(project) if project else []
     seq_strategy = args.seq_strategy
     seq_strategy = list(seq_strategy) if seq_strategy else []
-    
+
+    # empty the log folder
+    try:
+        if os.path.exists('log'): shutil.rmtree('log')
+        os.makedirs('log')
+    except Exception, err:
+        print str(err)
+        sys.exit(1) 
+
+    logger = logging.getLogger(__name__)
+    utils.setup_logging()
+   
     if not os.path.isfile(conf):
         logger.error('Configuration file does not exist!') 
         raise IOError('Configuration file does not exist!')
@@ -44,17 +55,6 @@ def main(argv=None):
     with open(conf, 'r') as c:
         conf_dict = yaml.load(c)
 
-    # empty the log folder
-    try:
-        if os.path.exists('log'): shutil.rmtree('log')
-        os.makedirs('log')
-        logger.info('Empty the log folder')
-    except Exception, err:
-        logger.error(str(err))
-        sys.exit(1) 
-
-    logger = logging.getLogger(__name__)
-    utils.setup_logging()
 
     # add annotations
     annotations = {}
