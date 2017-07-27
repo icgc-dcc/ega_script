@@ -71,11 +71,11 @@ def generate_files_to_stage(conf_dict, annotations, project, seq_strategy):
 
                     # skip the files already staged on ASPERA
                     if fid in annotations.get('staged'): 
-                        logger_stage.info('%s::%s has been staged!', project_code, fid) 
+                        logger_stage.warning('%s::%s has been staged!', project_code, fid) 
                         continue 
                     # skip the files already in job completed:
                     if fid in annotations.get('completed'): 
-                        logger_stage.info('%s::%s has been transferred!', project_code, fid) 
+                        logger_stage.warning('%s::%s has been transferred!', project_code, fid) 
                         continue
 
                     ega_file_list.append(fvalue)
@@ -102,6 +102,6 @@ def generate_files_to_remove(conf_dict, annotations):
             try:
                 ret = subprocess.check_output(['grep', fid, 'dbox_content'])
                 f.write(ret)
-                logger_remove.info('fid: %s is to be removed from the server', fid)
+                logger_remove.warning('fid: %s is to be removed from the server', fid)
             except subprocess.CalledProcessError:
                 continue      

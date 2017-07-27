@@ -66,7 +66,7 @@ def main(argv=None):
     # update the ega_xml audit repo
     try:
         origWD = os.getcwd()
-        os.chdir(os.path.join(conf_dict.get('ega_audit_base_path'), conf_dict.get('ega_audit').get('file_path')))
+        os.chdir(conf_dict.get('ega_audit_base_path'))
         subprocess.check_output("git checkout master", shell=True)
         subprocess.check_output("git pull", shell=True)
         os.chdir(origWD)
@@ -75,6 +75,14 @@ def main(argv=None):
         logger.error(str(err))
         sys.exit(1)    
 
+    # empty the log folder
+    try:
+        if os.path.exists('log'): shutil.rmtree('log')
+        os.makedirs('log')
+        logger.info('Empty the log folder')
+    except Exception, err:
+        logger.error(str(err))
+        sys.exit(1)      
 
     # get the fid which are to be staged by EGA
     to_stage_file_pattern = os.path.join(conf_dict.get('ega_audit_base_path'), conf_dict.get('ega_operation').get('file_path'), '*-*', 'to_stage_*.tsv')
