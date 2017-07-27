@@ -13,6 +13,7 @@ import job
 import audit
 import logging
 import utils
+import shutil
 
 
 def main(argv=None):

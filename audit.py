@@ -3,7 +3,6 @@ import csv
 import glob
 from collections import OrderedDict
 import subprocess
-import shutil
 import utils
 import logging
 
@@ -21,9 +20,6 @@ def generate_files_to_stage(conf_dict, annotations, project, seq_strategy):
     output_path = os.path.join(ega_audit_base_path, conf_dict.get('ega_operation').get('file_path'))
     to_stage_type = conf_dict.get('ega_operation').get('to_stage').get('type')
     mapping = conf_dict.get('ega_operation').get('to_stage').get('mapping')
-
-    # if os.path.exists(output_path): shutil.rmtree(output_path)
-    # os.makedirs(output_path)
 
     # generate the files need to be staged
     files = glob.glob(os.path.join(ega_audit_base_path, file_path, file_version, file_pattern))
