@@ -22,8 +22,8 @@ def generate_files_to_stage(conf_dict, annotations, project, seq_strategy):
     to_stage_type = conf_dict.get('ega_operation').get('to_stage').get('type')
     mapping = conf_dict.get('ega_operation').get('to_stage').get('mapping')
 
-    if os.path.exists(output_path): shutil.rmtree(output_path)
-    os.makedirs(output_path)
+    # if os.path.exists(output_path): shutil.rmtree(output_path)
+    # os.makedirs(output_path)
 
     # generate the files need to be staged
     files = glob.glob(os.path.join(ega_audit_base_path, file_path, file_version, file_pattern))
@@ -70,9 +70,13 @@ def generate_files_to_stage(conf_dict, annotations, project, seq_strategy):
                     if skip: continue
 
                     # skip the files already staged on ASPERA
-                    if fid in annotations.get('staged'): continue 
+                    if fid in annotations.get('staged'): 
+                        logger_stage.info('%s::%s has been staged!', project_code, fid) 
+                        continue 
                     # skip the files already in job completed:
-                    if fid in annotations.get('completed'): continue
+                    if fid in annotations.get('completed'): 
+                        logger_stage.info('%s::%s has been transferred!', project_code, fid) 
+                        continue
 
                     ega_file_list.append(fvalue)
             
