@@ -51,7 +51,9 @@ def generate(conf_dict, annotations, project, seq_strategy):
                     continue
 
                 # skip the files generated
-                if l.get('EGA File Accession') in annotations.get('generated'): continue
+                if l.get('EGA File Accession') in annotations.get('generated'): 
+                    logger.warning('The job for file %s::%s has already been generated.', project_code, l.get('EGA File Accession'))
+                    continue
 
                 if l.get('EGA Analysis Accession'):
                     bundle_id = l.get('EGA Analysis Accession')
