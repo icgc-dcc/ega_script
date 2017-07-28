@@ -23,11 +23,11 @@ def main(argv=None):
     parser.add_argument("-c", "--setting", dest="conf",
              help="Specify ega setting file", required=False)
     parser.add_argument("-t", "--task", dest="task",
-             help="Specify the task", required=True)
+             help="Specify the task [job, stage, remove]", required=True)
     parser.add_argument("-p", "--project", dest="project", nargs="*",
              help="Specify the project", required=False)
     parser.add_argument("-s", "--seq_strategy", dest="seq_strategy", nargs="*",
-             help="Specify the sequencing strategy", required=False)
+             help="Specify the sequencing strategy [RNA-Seq, WGS, WXS, Bisulfite-Seq]", required=False)
 
     args = parser.parse_args()
     conf = args.conf if args.conf else 'conf/conf.yaml'
