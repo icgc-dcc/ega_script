@@ -68,7 +68,7 @@ cd ega_script
 * If no `seq_strategy` is specified, the tool will generate the eligible jobs for all kinds of seq_strategy which are included in the related auditing reports. 
 * The generated jobs locates in `job_state.backlog` of one of the job repositories which is defined in the `conf/conf.yaml`, you can change the `job folder` if needed:
 ```
-job_folder: "ega-file-transfer-to-collab-2-jtracker/ega-file-transfer-to-collab.0.6.jtracker/job_state.backlog"
+job_folder: "ega-file-transfer-to-collab-jtracker/ega-file-transfer-to-collab.0.6.jtracker/job_state.backlog"
 ```
 
 ## Running the tool to generate the `to_stage` files
