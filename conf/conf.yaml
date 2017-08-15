@@ -105,6 +105,7 @@ ega_job:
       ega_file_id: "EGA File Accession"
       encrypted_file_md5sum: "MD5 Checksum"
       file_md5sum: "Unencrypted Checksum"
+      file_size: "File Size"
       library_strategy: "ICGC Submitted Sequencing Strategy"
 
 

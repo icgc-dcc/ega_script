@@ -82,6 +82,7 @@ def generate(conf_dict, annotations, project, seq_strategy):
                     'ega_file_id': l.get('EGA File Accession'),
                     'file_name': '.'.join([l.get('Unencrypted Checksum'), raw_file_name]),
                     'file_md5sum': l.get('Unencrypted Checksum'),
+                    'file_size': l.get('File Size', None),
                     'idx_file_name': '.'.join([l.get('Unencrypted Checksum'), raw_file_name, 'bai']) if l.get('EGA Analysis Accession') else None
                 })
 
