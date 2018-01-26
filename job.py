@@ -18,8 +18,10 @@ def generate(conf_dict, annotations, project, seq_strategy):
     job_fields = conf_dict.get('ega_job').get('job').get('job_fields')
     mapping = conf_dict.get('ega_job').get('job').get('mapping')
     job_path = conf_dict.get('ega_job').get('job_folder')
+    print os.path.join(ega_audit_base_path, file_path, file_version, file_pattern)
 
     files = glob.glob(os.path.join(ega_audit_base_path, file_path, file_version, file_pattern))
+    print files
     for fname in files:
         project_code = fname.split('/')[-2]
         # skip the project if not in the list of project

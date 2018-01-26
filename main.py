@@ -77,8 +77,8 @@ def main(argv=None):
     try:
         origWD = os.getcwd()
         os.chdir(conf_dict.get('ega_audit_base_path'))
-        subprocess.check_output("git checkout master", shell=True)
-        subprocess.check_output("git pull", shell=True)
+        #subprocess.check_output("git checkout master", shell=True)
+        #subprocess.check_output("git pull", shell=True)
         os.chdir(origWD)
         logger.info('Update the ega_xml audit repo')
     except Exception, err:
@@ -102,8 +102,8 @@ def main(argv=None):
         try:
             origWD = os.getcwd()
             os.chdir(repo)
-            subprocess.check_output("git checkout master", shell=True)
-            subprocess.check_output("git pull", shell=True)
+            #subprocess.check_output("git checkout master", shell=True)
+            #subprocess.check_output("git pull", shell=True)
             os.chdir(origWD)
             logger.info('Update the job repos')
         except Exception, err:

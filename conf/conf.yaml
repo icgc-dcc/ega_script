@@ -4,7 +4,7 @@ ega_job_base_path: ".."
 
 ega_audit:
   file_path: "ega_xml"
-  file_version: "v20170630"
+  file_version: "v20180115"
   file_pattern: "*-*/*.tsv"
 
 ega_operation:
@@ -70,6 +70,7 @@ ega_job:
     job_fields: [
       "bundle_id",
       "bundle_type",
+      "donor_gender",
       "ega_metadata_file_name",
       "ega_metadata_object_id",
       "ega_metadata_repo",
@@ -80,7 +81,9 @@ ega_job:
       "ega_experiment_id",
       "ega_run_id",
       "icgc_sample_id",
+      "insert_size",
       "library_strategy",
+      "paired_end",
       "project_code",
       "submitter_donor_id",
       "submitter_specimen_id",
@@ -107,8 +110,6 @@ ega_job:
       file_md5sum: "Unencrypted Checksum"
       file_size: "File Size"
       library_strategy: "ICGC Submitted Sequencing Strategy"
-
-
-
-
-
+      insert_size: "Insert Size"
+      paired_end: "Paired-End"
+      donor_gender: "ICGC Submitted Donor Gender"
